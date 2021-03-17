@@ -1,6 +1,6 @@
 //Printing button
-const printButton = document.getElementById("printPlan");
-printButton.addEventListener("click", printView);
+//const printButton = document.getElementById("printPlan");
+//printButton.addEventListener("click", printView);
 
 //Function that handles clearing the form
 function clearTextArea(areaToClear) {
