@@ -1,77 +1,85 @@
-
-
 .row-flex {
     display: flex;
     flex-wrap: wrap;
   }
 
-.col-md-8{
-    background-color: chartreuse;
+h1{
+    font-family: 'Cookie', cursive;
+    font-size: 2.5em;
+    text-align: center;
 }
 
-.col-md-4{
-    background-color: papayawhip; 
+h2{
+    font-family: 'Cookie', cursive;
+    font-size: 1.6em;
+    text-align: center;
+    margin: 0px;
+}
+
+ol{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 0.8em;
+}
+
+.text-input{
+    font-family: 'Tajawal', sans-serif;
+    font-size: 0.8em;
+}
+
+.list{
+    padding: 5px;
+}
+
+label{
+    font-family: 'Tajawal', sans-serif;
+}
+
+input[type='text']{
+    color:gray;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    border-radius: 1px;
+    border: 0;
+    padding-left: 10px;
+}
+
+#form-area{
+    background-color: rgb(226, 238, 238);
+}
+
+#pageWithPlan{
+    background-color: rgb(191, 214, 214);
 }
 
 #header{
-    background-color: blue;
     outline-style: solid;
-    outline-width: 2px;
+    outline-width: 1px;
     outline-color: black;
 }
 
-#first_row_left{
+#first_row_left, #second_row_left, #third_row_left, #fourth_row_left{
     height: 150px;
-    background-color: yellow;
     outline-style: solid;
-    outline-width: 2px;
+    outline-width: 1px;
     outline-color: black;
 }
 
-#second_row_left{
-    height: 150px;
-    background-color: yellowgreen;
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: black;
-}
-
-#third_row_left{
-    height: 150px;
-    background-color: rosybrown;
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: black; 
-}
-
-#fourth_row_left{
-    height: 150px;
-    background-color: lightcoral; 
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: black;
-}
-
-#first_row_right{
+#first_row_right, #second_row_right{
     height: 300px;
-    background-color: lightpink; 
     outline-style: solid;
-    outline-width: 2px;
-    outline-color: black;
-}
-
-#second_row_right{
-    height: 300px;
-    background-color: lightsalmon;
-    outline-style: solid;
-    outline-width: 2px;
+    outline-width: 1px;
     outline-color: black;
 }
 
 #footer{
     height: 100px;
-    background-color: orchid;
     outline-style: solid;
-    outline-width: 2px;
+    outline-width: 1px;
     outline-color: black;
 }
+

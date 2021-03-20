@@ -10,51 +10,98 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
+      crossorigin="anonymous" 
     />
-    <link rel="stylesheet" href="assets/styles/style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tajawal&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css" type="text/css" media="all"/>
     <script src="assets/scripts/app.js" defer></script>
   </head>
   <body>
     <div class="container-md">
       <div class="row">
         <!--Form Area-->
-        <div class="col-md-4">COLUMN 1 BEGINNING<div>
+        <div class="col-md-4" id="form-area">
+          COLUMN 1 BEGINNING
+          <div>
             <!--Today goal-->
             <label for="todaygoal">Today's goals</label><br />
-            <input type="text" id="todaygoal" maxlength = "30"/>
-            <button type="button" class="addButton" id="addGoal">Add!</button><br />
-            
+            <input
+              type="text"
+              id="todaygoal"
+              value="Add goals for today"
+              maxlength="30"
+            />
+            <button type="button" class="addButton" id="addGoal">Add!</button
+            ><br />
+
             <!--Priority-->
             <label for="priority">Priority</label><br />
-            <input type="text" id="priority" maxlength = "100"/>
-            <button type="button" class="addButton" id="addPriorityButton">Add!</button><br />
-            
+            <input
+              type="text"
+              id="priority"
+              value="Add priority for today"
+              maxlength="100"
+            />
+            <button type="button" class="addButton" id="addPriorityButton">
+              Add!</button
+            ><br />
+
             <!--Meal-->
-            <label for="todaymeal">Meal</label><br />           
-            <input type="text" id="todaymeal" maxlength = "30"/>
-            <button type="button" class="addButton" id="addMealButton">Add!</button><br />
-            
+            <label for="todaymeal">Meal</label><br />
+            <input
+              type="text"
+              id="todaymeal"
+              value="Add meals for today"
+              maxlength="30"
+            />
+            <button type="button" class="addButton" id="addMealButton">
+              Add!</button
+            ><br />
+
             <!--Grateful-->
             <label for="grateful">I am grateful for</label><br />
-            <input type="text" id="grateful" maxlength = "100"/>
-            <button type="button" class="addButton" id="addGratefulButton">Add!</button><br />
-            
+            <input
+              type="text"
+              id="grateful"
+              value="What for are you grateful today?"
+              maxlength="100"
+            />
+            <button type="button" class="addButton" id="addGratefulButton">
+              Add!</button
+            ><br />
+
             <!--To do-->
-            <label for="todo">To do</label><br />           
-            <input type="text" id="todo" maxlength = "60"/>
-            <button type="button" class="addButton" id="addToDoButton">Add!</button><br /> 
-            
+            <label for="todo">To do</label><br />
+            <input
+              type="text"
+              id="todo"
+              value="Add your tasks for today"
+              maxlength="60"
+            />
+            <button type="button" class="addButton" id="addToDoButton">
+              Add!</button
+            ><br />
+
             <!--Appointments-->
             <label for="appointments">Appointments</label><br />
-            <input type="text" id="appointments" maxlength = "60"/>
-            <button type="button" class="addButton" id="addAppointmentButton">Add!</button><br />
-            
+            <input
+              type="text"
+              id="appointments"
+              value="Add your appointments for today"
+              maxlength="60"
+            />
+            <button type="button" class="addButton" id="addAppointmentButton">
+              Add!</button
+            ><br />
+
             <!--Notes-->
             <label for="notes">Notes</label><br />
-            <input type="text" id="notes" maxlength = "100"/>
-            <button type="button" class="addButton" id="addNotesButton">Add!</button><br />
-            
+            <input type="text" id="notes" value="Add notes" maxlength="100" />
+            <button type="button" class="addButton" id="addNotesButton">
+              Add!</button
+            ><br />
+
             <!--Printing button-->
             <button type="button" class="printButton" id="printPlan">
               Print!
@@ -63,59 +110,58 @@
         </div>
 
         <!--Page with Plan-->
-          <div class="col-md-8" id="pageWithPlan">
-            COLUMN 2 BEGINNING
-            <div id="header" class="row g-0">
-              <h1>Day schedule</h1>
-            </div>
-            <div class="row row-flex g-0" id="formArea">
-              <div id="left_column" class="col-md-4">
-                
-                <!--Today goals input-->
-                <div id="first_row_left">
-                  <h2>Today's goals</h2>
-                  <ol id="goalsList"></ol>
-                </div>
-                
-                <!--Priority input-->
-                <div id="second_row_left">
-                  <h2>Priority</h2>
-                  <div id="priorityInput"></div>
-                </div>
-
-                <!--Meals input-->
-                <div id="third_row_left">
-                  <h2>Meals</h2>
-                  <ol id="mealsList"></ol>
-                </div>
-
-                <!--Grateful input-->
-                <div id="fourth_row_left">
-                  <h2>I am grateful for</h2>
-                  <div id="gratefulInput"></div>
-                </div>
-              </div>
-
-              <div id="rigth_column" class="col-md-8">
-                <!--To do input-->
-                <div id="first_row_right">
-                  <h2>To do</h2>
-                  <ol id="toDoList"></ol>
-                </div>
-
-                <!--Appointments input-->
-                <div id="second_row_right">
-                  <h2>Appointments</h2>
-                  <ol id="appointmentsList"></ol>
-                </div>
-              </div>
-            </div>
-            <span id="footer" class="row g-0">
-              <h2>Notes</h2>
-              <div id="notesInput"></div>
-            </span>
-            <div>COLUMN 2 END</div>
+        <div class="col-md-8" id="pageWithPlan">
+          COLUMN 2 BEGINNING
+          <div id="header" class="row g-0">
+            <h1>Day schedule</h1>
           </div>
+          <div class="row row-flex g-0" id="formArea">
+            <div id="left_column" class="col-md-4">
+              <!--Today goals input-->
+              <div id="first_row_left" class="list">
+                <h2>Today's goals</h2>
+                <ol id="goalsList"></ol>
+              </div>
+
+              <!--Priority input-->
+              <div id="second_row_left" class="list">
+                <h2>Priority</h2>
+                <div id="priorityInput" class="text-input"></div>
+              </div>
+
+              <!--Meals input-->
+              <div id="third_row_left" class="list">
+                <h2>Meals</h2>
+                <ol id="mealsList"></ol>
+              </div>
+
+              <!--Grateful input-->
+              <div id="fourth_row_left" class="list">
+                <h2>I am grateful for</h2>
+                <div id="gratefulInput" class="text-input"></div>
+              </div>
+            </div>
+
+            <div id="rigth_column" class="col-md-8">
+              <!--To do input-->
+              <div id="first_row_right" class="list">
+                <h2>To do</h2>
+                <ol id="toDoList"></ol>
+              </div>
+
+              <!--Appointments input-->
+              <div id="second_row_right" class="list">
+                <h2>Appointments</h2>
+                <ol id="appointmentsList"></ol>
+              </div>
+            </div>
+          </div>
+          <span id="footer" class="row g-0" class="list">
+            <h2>Notes</h2>
+            <div id="notesInput" class="text-input"></div>
+          </span>
+          <div>COLUMN 2 END</div>
+        </div>
       </div>
     </div>
   </body>

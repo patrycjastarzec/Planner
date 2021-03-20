@@ -1,6 +1,21 @@
 //Printing button
-//const printButton = document.getElementById("printPlan");
-//printButton.addEventListener("click", printView);
+const printButton = document.getElementById("printPlan");
+printButton.addEventListener("click", printView);
+
+function printView() {
+	const pageWithPlan = document.getElementById("pageWithPlan");
+  const formArea = document.getElementById("form-area");
+  formArea.style.display = "none";
+  /*
+  stronaZLista.className = "wydruk";
+  obszarMojejListy.innerHTML = '';
+  mojaLista.sort();
+  for (var i = 0; i < mojaLista.length; i++){
+  	obszarMojejListy.innerHTML += "<li>" + mojaLista[i] + "</li>";
+  }
+  */
+  window.print();
+}
 
 //Function that handles clearing the form
 function clearTextArea(areaToClear) {
