@@ -4,25 +4,40 @@ let myMealList = [];
 let myToDoList = [];
 let myAppointmentsList = [];
 
-function addToList(elementToAdd) {
-  let myList;
-  if (elementToAdd === goalInput.value){
-     listArea = goalListArea;
-     myList = myGoalList;
-  } else if (elementToAdd === mealInput.value){
-     listArea = mealListArea;
-     myList = myMealList;
-  } else if (elementToAdd === toDoInput.value){
-     listArea = tasksListArea;
-     myList = myToDoList;
-  } else if (elementToAdd === appointmentInput.value){
-     listArea = appointmentsListArea;
-     myList = myAppointmentsList;
+function addListElement(input) {
+  let userInput = input.value;
+  if (userInput.length > 0) {
+    appendList(userInput);
   }
-  myList.push(elementToAdd);
+  clearTextArea(input);
+}
+
+function appendList(inputList) {
+  let myList;
+  let listArea;
+  if (inputList === goalInput.value) {
+    listArea = goalListArea;
+    myList = myGoalList;
+  } else if (inputList === mealInput.value) {
+    listArea = mealListArea;
+    myList = myMealList;
+  } else if (inputList === toDoInput.value) {
+    listArea = tasksListArea;
+    myList = myToDoList;
+  } else if (inputList === appointmentInput.value) {
+    listArea = appointmentsListArea;
+    myList = myAppointmentsList;
+  }
+  myList.push(inputList);
   let newElement = document.createElement("li");
-  newElement.innerHTML = `${elementToAdd}`
-  if (myList.length < 6) {
+  newElement.innerHTML = `${inputList}`;
+  if (myList.length < 6 && myList == myGoalList) {
+    listArea.appendChild(newElement);
+  } else if (myList.length < 6 && myList == myMealList){
+    listArea.appendChild(newElement);
+  } else if (myList.length < 11 && myList == myToDoList){
+    listArea.appendChild(newElement);
+  } else if (myList.length < 11 && myList == myAppointmentsList){
     listArea.appendChild(newElement);
   }
 }
@@ -31,27 +46,19 @@ function clearTextArea(areaToClear) {
   areaToClear.value = "";
 }
 
-function addListElement(input) {
-  let userInput = input.value;
-  if (userInput.length > 0) {
-    addToList(userInput);
-  }
-  clearTextArea(input);
-}
-
-function addGoalElement(){
+function addGoalElement() {
   addListElement(goalInput);
 }
 
-function addMealElement(){
+function addMealElement() {
   addListElement(mealInput);
 }
 
-function addToDoElement(){
+function addToDoElement() {
   addListElement(toDoInput);
 }
 
-function addAppointmentElement(){
+function addAppointmentElement() {
   addListElement(appointmentInput);
 }
 
@@ -62,15 +69,15 @@ addAppointmentButton.addEventListener("click", addAppointmentElement);
 
 //-----------------Text input-----------------
 
-function addPriorityElement(){
+function addPriorityElement() {
   addTextElement(priorityInput);
 }
 
-function addGratefulElement(){
+function addGratefulElement() {
   addTextElement(gratefulInput);
 }
 
-function addNotesElement(){
+function addNotesElement() {
   addTextElement(notesInput);
 }
 
@@ -78,7 +85,7 @@ function addTextElement(input) {
   let userInput = input.value;
   if (input === priorityInput) {
     myElement = priorityElement;
-  } else if (input === gratefulInput){
+  } else if (input === gratefulInput) {
     myElement = gratefulElement;
   } else if (input === notesInput) {
     myElement = notesElement;
