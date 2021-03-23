@@ -14,6 +14,8 @@ const addPriorButton = document.getElementById("addPriorityButton");
 const addGratefulButton = document.getElementById("addGratefulButton");
 const addNotesButton = document.getElementById("addNotesButton");
 
+const printButton = document.getElementById("printPlan");
+
 let goalListArea = document.getElementById("goalsList");
 let mealListArea = document.getElementById("mealsList");
 let tasksListArea = document.getElementById("toDoList");

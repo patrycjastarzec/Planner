@@ -57,6 +57,7 @@ input{
 }
 
 #header{
+    height: 150px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
@@ -77,7 +78,7 @@ input{
 }
 
 #footer{
-    height: 100px;
+    height: 200px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;

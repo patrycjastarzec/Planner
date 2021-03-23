@@ -14,12 +14,14 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tajawal&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="assets/styles/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="assets/styles/print.css" type="text/css" media="print" >
     <script src="assets/scripts/vendor.js" defer></script>
     <script src="assets/scripts/app.js" defer></script>
   </head>
+  
   <body>
-    <div class="container-md">
+    <div class="container">
       <div class="row">
         <!--Form Area-->
         <div class="col-md-4" id="form-area">
@@ -33,8 +35,9 @@
               value="Add goals for today"
               maxlength="30"
             />
-            <button type="button" class="addButton" id="addGoal">Add!</button
-            ><br />
+            <button type="button" class="addButton" id="addGoal">
+              add
+            </button><br />
 
             <!--Priority-->
             <label for="priority">Priority</label><br />
@@ -45,8 +48,9 @@
               maxlength="100"
             />
             <button type="button" class="addButton" id="addPriorityButton">
-              Add!</button
-            ><br />
+              add
+            </button><br />
+            
 
             <!--Meal-->
             <label for="todaymeal">Meal</label><br />
@@ -57,20 +61,22 @@
               maxlength="30"
             />
             <button type="button" class="addButton" id="addMealButton">
-              Add!</button
-            ><br />
+              add
+            </button><br />
+            
 
             <!--Grateful-->
             <label for="grateful">I am grateful for</label><br />
             <input
               type="text"
               id="grateful"
-              value="What for are you grateful today?"
+              value="What are you grateful for today?"
               maxlength="100"
             />
             <button type="button" class="addButton" id="addGratefulButton">
-              Add!</button
-            ><br />
+              add
+            </button><br />
+            
 
             <!--To do-->
             <label for="todo">To do</label><br />
@@ -81,8 +87,9 @@
               maxlength="60"
             />
             <button type="button" class="addButton" id="addToDoButton">
-              Add!</button
-            ><br />
+              add
+            </button><br />
+            
 
             <!--Appointments-->
             <label for="appointments">Appointments</label><br />
@@ -93,19 +100,20 @@
               maxlength="60"
             />
             <button type="button" class="addButton" id="addAppointmentButton">
-              Add!</button
-            ><br />
+              add
+            </button><br />
 
             <!--Notes-->
             <label for="notes">Notes</label><br />
             <input type="text" id="notes" value="Add notes" maxlength="100" />
             <button type="button" class="addButton" id="addNotesButton">
-              Add!</button
-            ><br />
+              add
+            </button><br />
+            
 
             <!--Printing button-->
             <button type="button" class="printButton" id="printPlan">
-              Print!
+              print
             </button>
           </div>
         </div>

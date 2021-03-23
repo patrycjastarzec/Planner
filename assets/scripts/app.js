@@ -97,3 +97,14 @@ function addTextElement(input) {
 addPriorButton.addEventListener("click", addPriorityElement);
 addGratefulButton.addEventListener("click", addGratefulElement);
 addNotesButton.addEventListener("click", addNotesElement);
+
+//-----------------Printing-----------------
+
+function printView() {
+	const pageWithPlan = document.getElementById("pageWithPlan");
+  const formArea = document.getElementById("form-area");
+  formArea.style.display = "none";
+  window.print();
+}
+
+printButton.addEventListener("click", printView);
