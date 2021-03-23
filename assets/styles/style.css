@@ -1,8 +1,3 @@
-.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
 h1{
     font-family: 'Cookie', cursive;
     font-size: 2.5em;
@@ -48,12 +43,20 @@ input{
     padding-left: 10px;
 }
 
+#intro{
+    font-family: 'Tajawal', sans-serif;
+}
+
 #form-area{
     background-color: rgb(226, 238, 238);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #pageWithPlan{
     background-color: rgb(191, 214, 214);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #header{
@@ -61,6 +64,7 @@ input{
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
+    padding: 10px;
 }
 
 #first_row_left, #second_row_left, #third_row_left, #fourth_row_left{
@@ -82,5 +86,16 @@ input{
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
+    padding: 5px;
 }
 
+.container {
+    position: relative;
+}
+#author {
+    position: absolute;
+    bottom: 0;
+    color:rgb(0, 0, 0);
+    font-size: 0.8em;
+    font-style: italic;
+}

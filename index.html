@@ -25,8 +25,11 @@
       <div class="row">
         <!--Form Area-->
         <div class="col-md-4" id="form-area">
-          COLUMN 1 BEGINNING
           <div>
+            <div>
+              <h1>Hello!</h1>
+              <p id="intro">This app is created to help you plan your day and stay more productive. Fill out the form and add the elements from below to the layout. You can print it and follow your plan through the day!</p>
+            </div>
             <!--Today goal-->
             <label for="todaygoal">Today's goals</label><br />
             <input
@@ -37,7 +40,7 @@
             />
             <button type="button" class="addButton" id="addGoal">
               add
-            </button><br />
+            </button><br/>
 
             <!--Priority-->
             <label for="priority">Priority</label><br />
@@ -49,9 +52,8 @@
             />
             <button type="button" class="addButton" id="addPriorityButton">
               add
-            </button><br />
+            </button><br/>
             
-
             <!--Meal-->
             <label for="todaymeal">Meal</label><br />
             <input
@@ -62,9 +64,8 @@
             />
             <button type="button" class="addButton" id="addMealButton">
               add
-            </button><br />
+            </button><br/>
             
-
             <!--Grateful-->
             <label for="grateful">I am grateful for</label><br />
             <input
@@ -75,9 +76,8 @@
             />
             <button type="button" class="addButton" id="addGratefulButton">
               add
-            </button><br />
+            </button><br/>
             
-
             <!--To do-->
             <label for="todo">To do</label><br />
             <input
@@ -88,9 +88,8 @@
             />
             <button type="button" class="addButton" id="addToDoButton">
               add
-            </button><br />
+            </button><br/>
             
-
             <!--Appointments-->
             <label for="appointments">Appointments</label><br />
             <input
@@ -101,26 +100,30 @@
             />
             <button type="button" class="addButton" id="addAppointmentButton">
               add
-            </button><br />
+            </button><br/>
 
             <!--Notes-->
             <label for="notes">Notes</label><br />
             <input type="text" id="notes" value="Add notes" maxlength="100" />
             <button type="button" class="addButton" id="addNotesButton">
               add
-            </button><br />
+            </button><br/>
             
 
             <!--Printing button-->
             <button type="button" class="printButton" id="printPlan">
               print
             </button>
+
+            <footer id="author">
+              created by: Patrycja Starzec, version 1.0, 2021
+            </footer>
           </div>
         </div>
 
         <!--Page with Plan-->
         <div class="col-md-8" id="pageWithPlan">
-          COLUMN 2 BEGINNING
+
           <div id="header" class="row g-0">
             <h1>Day schedule</h1>
           </div>
@@ -169,7 +172,6 @@
             <h2>Notes</h2>
             <div id="notesElement" class="text-input"></div>
           </span>
-          <div>COLUMN 2 END</div>
         </div>
       </div>
     </div>
