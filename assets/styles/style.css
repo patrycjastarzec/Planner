@@ -27,6 +27,8 @@ ol{
 
 label{
     font-family: 'Tajawal', sans-serif;
+    padding-top: 15px;
+    font-weight: 700;
 }
 
 input[type='text']{
@@ -43,8 +45,25 @@ input{
     padding-left: 10px;
 }
 
+#dateInput{
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#quote{
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    font-size: 1.25em;
+    color:rgb(80, 80, 80);
+    margin-top: 5px;
+}
+
 #intro{
     font-family: 'Tajawal', sans-serif;
+    text-align: justify;
+    padding-right: 10px;
 }
 
 #form-area{
@@ -92,6 +111,7 @@ input{
 .container {
     position: relative;
 }
+
 #author {
     position: absolute;
     bottom: 0;
@@ -99,3 +119,28 @@ input{
     font-size: 0.8em;
     font-style: italic;
 }
+
+/*-------------BUTTONS-----------------*/
+button{
+    background-color: rgb(72, 145, 145);
+    border-width: 0;
+    height: 20px;
+    width: 20px;
+    box-shadow: 2.5px 2.5px 5px grey;
+    border-radius: 10%;
+}
+
+#printPlan, #clearPlan{
+    height: 25px;
+    width: 40px;
+}
+
+button[class="printButton"]{
+    margin-top: 20px;
+}
+.addButton, .removeButton, #printPlan, #clearPlan{
+    font-size: 0.7em;
+    color: white;
+}
+
+/*-------------------------------------*/

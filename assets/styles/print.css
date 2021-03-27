@@ -223,6 +223,21 @@ ol{
     font-size: 0.8em;
 }
 
+#dateInput{
+  text-align: center;
+  font-family: 'Cookie', cursive;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+#quote{
+  text-align: center;
+  font-family: 'Cookie', cursive;
+  font-size: 1.25em;
+  color:rgb(80, 80, 80);
+  margin-top: 5px;
+}
+
 .list{
     padding: 5px;
 }

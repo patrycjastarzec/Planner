@@ -13,11 +13,13 @@
       crossorigin="anonymous" 
     />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="assets/styles/print.css" type="text/css" media="print" >
     <script src="assets/scripts/vendor.js" defer></script>
     <script src="assets/scripts/app.js" defer></script>
+    <script src="assets/scripts/date.js" defer></script>
+    <script src="assets/scripts/quotes.js" defer></script>
   </head>
   
   <body>
@@ -31,19 +33,22 @@
               <p id="intro">This app is created to help you plan your day and stay more productive. Fill out the form and add the elements from below to the layout. You can print it and follow your plan through the day!</p>
             </div>
             <!--Today goal-->
-            <label for="todaygoal">Today's goals</label><br />
+            <label for="todaygoal">Today's goals:</label><br />
             <input
               type="text"
               id="todaygoal"
               value="Add goals for today"
               maxlength="30"
             />
-            <button type="button" class="addButton" id="addGoal">
-              add
+            <button type="button" class="addButton" id="addGoalButton">
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeGoalButton">
+              -
             </button><br/>
 
             <!--Priority-->
-            <label for="priority">Priority</label><br />
+            <label for="priority">Priority:</label><br />
             <input
               type="text"
               id="priority"
@@ -51,11 +56,14 @@
               maxlength="100"
             />
             <button type="button" class="addButton" id="addPriorityButton">
-              add
+              +
+            </button>
+            <button type="button" class="removeButton" id="removePriorityButton">
+              -
             </button><br/>
             
             <!--Meal-->
-            <label for="todaymeal">Meal</label><br />
+            <label for="todaymeal">Meal:</label><br />
             <input
               type="text"
               id="todaymeal"
@@ -63,11 +71,14 @@
               maxlength="30"
             />
             <button type="button" class="addButton" id="addMealButton">
-              add
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeMealButton">
+              -
             </button><br/>
             
             <!--Grateful-->
-            <label for="grateful">I am grateful for</label><br />
+            <label for="grateful">I am grateful for:</label><br />
             <input
               type="text"
               id="grateful"
@@ -75,11 +86,14 @@
               maxlength="100"
             />
             <button type="button" class="addButton" id="addGratefulButton">
-              add
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeGratefulButton">
+              -
             </button><br/>
             
             <!--To do-->
-            <label for="todo">To do</label><br />
+            <label for="todo">To do:</label><br />
             <input
               type="text"
               id="todo"
@@ -87,11 +101,14 @@
               maxlength="60"
             />
             <button type="button" class="addButton" id="addToDoButton">
-              add
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeToDoButton">
+              -
             </button><br/>
             
             <!--Appointments-->
-            <label for="appointments">Appointments</label><br />
+            <label for="appointments">Appointments:</label><br />
             <input
               type="text"
               id="appointments"
@@ -99,20 +116,28 @@
               maxlength="60"
             />
             <button type="button" class="addButton" id="addAppointmentButton">
-              add
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeAppointmentButton">
+              -
             </button><br/>
 
             <!--Notes-->
-            <label for="notes">Notes</label><br />
+            <label for="notes">Notes:</label><br />
             <input type="text" id="notes" value="Add notes" maxlength="100" />
             <button type="button" class="addButton" id="addNotesButton">
-              add
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeNotesButton">
+              -
             </button><br/>
-            
 
             <!--Printing button-->
             <button type="button" class="printButton" id="printPlan">
-              print
+              print!
+            </button>
+            <button type="button" class="clearButton" id="clearPlan">
+              clear!
             </button>
 
             <footer id="author">
@@ -126,6 +151,8 @@
 
           <div id="header" class="row g-0">
             <h1>Day schedule</h1>
+            <p id="dateInput"></p>
+            <p id="quote"></p>
           </div>
           <div class="row row-flex g-0" id="formArea">
             <div id="left_column" class="col-md-4">

@@ -108,3 +108,18 @@ function printView() {
 }
 
 printButton.addEventListener("click", printView);
+
+
+//-----------------Clearing-----------------
+
+function clearPlan(){
+  goalListArea.innerHTML = '';
+  mealListArea.innerHTML = '';
+  tasksListArea.innerHTML = '';
+  appointmentsListArea.innerHTML = '';
+  priorityElement.innerHTML = '';
+  gratefulElement.innerHTML = '';
+  notesElement.innerHTML = '';
+}
+
+clearButton.addEventListener("click", clearPlan);
