@@ -30,7 +30,7 @@ function appendList(inputList) {
   }
   myList.push(inputList);
   let newElement = document.createElement("li");
-  newElement.innerHTML = `${inputList}`;
+  newElement.innerHTML = inputList;
   if (myList.length < 6 && myList == myGoalList) {
     listArea.appendChild(newElement);
   } else if (myList.length < 6 && myList == myMealList){
@@ -69,6 +69,24 @@ addAppointmentButton.addEventListener("click", addAppointmentElement);
 
 //-----------------Text input-----------------
 
+function addTextElement(input) {
+  let myElement;
+  let userInput = input.value;
+  let newElement = document.createElement("p");
+  if (input === priorityInput) {
+    myElement = priorityElement;
+  } else if (input === gratefulInput) {
+    myElement = gratefulElement;
+  } else if (input === notesInput) {
+    myElement = notesElement;
+  }
+  newElement.innerHTML = userInput;
+  if(myElement.children.length < 1){
+    myElement.appendChild(newElement);
+  }
+  clearTextArea(input);
+}
+
 function addPriorityElement() {
   addTextElement(priorityInput);
 }
@@ -81,22 +99,42 @@ function addNotesElement() {
   addTextElement(notesInput);
 }
 
-function addTextElement(input) {
-  let userInput = input.value;
-  if (input === priorityInput) {
-    myElement = priorityElement;
-  } else if (input === gratefulInput) {
-    myElement = gratefulElement;
-  } else if (input === notesInput) {
-    myElement = notesElement;
-  }
-  myElement.innerHTML = userInput;
-  clearTextArea(input);
-}
-
 addPriorButton.addEventListener("click", addPriorityElement);
 addGratefulButton.addEventListener("click", addGratefulElement);
 addNotesButton.addEventListener("click", addNotesElement);
+
+//-----------------Remove text input------------
+
+const PRIORITY = "PRIORITY";
+const GRATEFUL = "GRATEFUL";
+const NOTES = "NOTES";
+
+function removeTextElement(element){
+  if (element === "PRIORITY"){
+    myElement = priorityElement;
+  } else if (element === "GRATEFUL"){
+    myElement = gratefulElement;
+  } else if (element === "NOTES"){
+    myElement = notesElement;
+  }
+  myElement.innerHTML = "";
+}
+
+function removePriorElement(){
+  removeTextElement(PRIORITY);
+}
+
+function removeGratefulElement(){
+  removeTextElement(GRATEFUL);
+}
+
+function removeNotesElement(){
+  removeTextElement(NOTES);
+}
+
+removePriorButton.addEventListener('click', removePriorElement);
+removeGratefulButton.addEventListener('click', removeGratefulElement);
+removeNotesButton.addEventListener('click', removeNotesElement);
 
 //-----------------Printing-----------------
 
@@ -113,13 +151,13 @@ printButton.addEventListener("click", printView);
 //-----------------Clearing-----------------
 
 function clearPlan(){
-  goalListArea.innerHTML = '';
-  mealListArea.innerHTML = '';
-  tasksListArea.innerHTML = '';
-  appointmentsListArea.innerHTML = '';
-  priorityElement.innerHTML = '';
-  gratefulElement.innerHTML = '';
-  notesElement.innerHTML = '';
+  goalListArea.innerHTML = "";
+  mealListArea.innerHTML = "";
+  tasksListArea.innerHTML = "";
+  appointmentsListArea.innerHTML = "";
+  priorityElement.innerHTML = "";
+  gratefulElement.innerHTML = "";
+  notesElement.innerHTML = "";
 }
 
 clearButton.addEventListener("click", clearPlan);
