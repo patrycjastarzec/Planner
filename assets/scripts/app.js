@@ -94,10 +94,11 @@ removeNotesButton.addEventListener('click', removeNotesElement);
 //-----------------Remove list input------------
 
 function removeListElement(listArea, myList){
-  listArea.removeChild(listArea.lastElementChild);
-  myList.pop();
-  console.log(myList.length);
-  console.log(listArea.length);
+  if(myList.length > 0){
+    listArea.removeChild(listArea.lastElementChild);
+    myList.pop();
+    console.log(myList.length); // to check the length of list in browser developer tools
+  }
 }
 
 function removeGoalListElement(){
