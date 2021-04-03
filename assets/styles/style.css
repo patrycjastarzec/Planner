@@ -33,6 +33,7 @@ label{
 }
 
 input[type='text']{
+    font-family: 'Tajawal', sans-serif;
     color:gray;
     font-size: 0.8em;
     font-style: italic;
