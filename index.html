@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="assets/styles/print.css" type="text/css" media="print" >
+    <link rel="stylesheet" href="assets/styles/print.css" type="text/css" media="print" />
     <script src="assets/scripts/vendor.js" defer></script>
     <script src="assets/scripts/app.js" defer></script>
     <script src="assets/scripts/date.js" defer></script>
@@ -124,14 +124,20 @@
             </button><br/>
 
             <!--Notes-->
-            <label for="notes">Notes:</label><br />
-            <input type="text" id="notes" value="Add notes" maxlength="100" />
-            <button type="button" class="addButton" id="addNotesButton">
-              +
-            </button>
-            <button type="button" class="removeButton" id="removeNotesButton">
-              -
-            </button><br/>
+            <span id="notesSpan">
+              <label for="notes">Notes:</label><br />
+              <textarea 
+                type="text" 
+                id="notes" 
+                placeholder="Add notes" 
+                maxlength="100"></textarea>
+              <button type="button" class="addButton" id="addNotesButton">
+                +
+              </button>
+              <button type="button" class="removeButton" id="removeNotesButton">
+                -
+              </button><br/>
+            </span>
 
             <!--Printing button-->
             <button type="button" class="printButton" id="printPlan">
