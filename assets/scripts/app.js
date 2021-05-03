@@ -20,26 +20,10 @@ function clearTextArea(areaToClear) {
   areaToClear.value = "";
 }
 
-function addGoalElement() {
-  addListElement(goalInput, myGoalList, goalListArea, 5);
-}
-
-function addMealElement() {
-  addListElement(mealInput, myMealList, mealListArea, 5);
-}
-
-function addToDoElement() {
-  addListElement(toDoInput, myToDoList, tasksListArea, 10);
-}
-
-function addAppointmentElement() {
-  addListElement(appointmentInput, myAppointmentsList, appointmentsListArea, 10);
-}
-
-addGoalButton.addEventListener("click", addGoalElement);
-addMealButton.addEventListener("click", addMealElement);
-addToDoButton.addEventListener("click", addToDoElement);
-addAppointmentButton.addEventListener("click", addAppointmentElement);
+addGoalButton.addEventListener("click", addListElement.bind(this, goalInput, myGoalList, goalListArea, 5));
+addMealButton.addEventListener("click", addListElement.bind(this, mealInput, myMealList, mealListArea, 5));
+addToDoButton.addEventListener("click", addListElement.bind(this, toDoInput, myToDoList, tasksListArea, 10));
+addAppointmentButton.addEventListener("click", addListElement.bind(this, appointmentInput, myAppointmentsList, appointmentsListArea, 10));
 
 //-----------------Text input-----------------
 
@@ -53,21 +37,9 @@ function addTextElement(input, myElement) {
   clearTextArea(input);
 }
 
-function addPriorityElement() {
-  addTextElement(priorityInput, priorityElement);
-}
-
-function addGratefulElement() {
-  addTextElement(gratefulInput, gratefulElement);
-}
-
-function addNotesElement() {
-  addTextElement(notesInput, notesElement);
-}
-
-addPriorButton.addEventListener("click", addPriorityElement);
-addGratefulButton.addEventListener("click", addGratefulElement);
-addNotesButton.addEventListener("click", addNotesElement);
+addPriorButton.addEventListener("click", addTextElement.bind(this, priorityInput, priorityElement));
+addGratefulButton.addEventListener("click", addTextElement.bind(this, gratefulInput, gratefulElement));
+addNotesButton.addEventListener("click", addTextElement.bind(this, notesInput, notesElement));
 
 //-----------------Remove text input------------
 
@@ -75,21 +47,9 @@ function removeTextElement(myElement){
   myElement.innerHTML = "";
 }
 
-function removePriorElement(){
-  removeTextElement(priorityElement);
-}
-
-function removeGratefulElement(){
-  removeTextElement(gratefulElement);
-}
-
-function removeNotesElement(){
-  removeTextElement(notesElement);
-}
-
-removePriorButton.addEventListener('click', removePriorElement);
-removeGratefulButton.addEventListener('click', removeGratefulElement);
-removeNotesButton.addEventListener('click', removeNotesElement);
+removePriorButton.addEventListener('click', removeTextElement.bind(this, priorityElement));
+removeGratefulButton.addEventListener('click', removeTextElement.bind(this, gratefulElement));
+removeNotesButton.addEventListener('click', removeTextElement.bind(this, notesElement));
 
 //-----------------Remove list input------------
 
@@ -101,26 +61,10 @@ function removeListElement(listArea, myList){
   }
 }
 
-function removeGoalListElement(){
-  removeListElement(goalListArea, myGoalList);
-}
-
-function removeMealListElement(){
-  removeListElement(mealListArea, myMealList);
-}
-
-function removeToDolListElement(){
-  removeListElement(tasksListArea, myToDoList);
-}
-
-function removeAppointmentsListElement(){
-  removeListElement(appointmentsListArea, myAppointmentsList);
-}
-
-removeGoalButton.addEventListener('click', removeGoalListElement);
-removeMealButton.addEventListener('click', removeMealListElement);
-removeToDoButton.addEventListener('click', removeToDolListElement);
-removeAppointmentButton.addEventListener('click', removeAppointmentsListElement);
+removeGoalButton.addEventListener('click', removeListElement.bind(this, goalListArea, myGoalList));
+removeMealButton.addEventListener('click', removeListElement.bind(this, mealListArea, myMealList));
+removeToDoButton.addEventListener('click', removeListElement.bind(this, tasksListArea, myToDoList));
+removeAppointmentButton.addEventListener('click', removeListElement.bind(this, appointmentsListArea, myAppointmentsList));
 
 
 //-----------------Printing-----------------
