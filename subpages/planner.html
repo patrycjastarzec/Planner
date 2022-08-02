@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Planner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/styles/style.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/styles/print.css"
+      type="text/css"
+      media="print"
+    />
+    <script src="../assets/scripts/vendor.js" defer></script>
+    <script src="../assets/scripts/app.js" defer></script>
+    <script src="../assets/scripts/date.js" defer></script>
+    <script src="../assets/scripts/quotes.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <!--Form Area-->
+        <div class="col-md-4" id="form-area">
+          <div>
+            <div>
+              <h1>Hello!</h1>
+              <p id="intro">
+                This app is created to help you plan your day and stay more
+                productive. Fill out the form and add the elements from below to
+                the layout. You can print it and follow your plan through the
+                day!
+              </p>
+            </div>
+            <!--Today goal-->
+            <label for="todaygoal">Today's goals:</label><br />
+            <input
+              type="text"
+              id="todaygoal"
+              placeholder="Add goals for today"
+              maxlength="30"
+            />
+            <button type="button" class="addButton" id="addGoalButton">
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeGoalButton">
+              -</button
+            ><br />
+
+            <!--Priority-->
+            <label for="priority">Priority:</label><br />
+            <input
+              type="text"
+              id="priority"
+              placeholder="Add priority for today"
+              maxlength="100"
+            />
+            <button type="button" class="addButton" id="addPriorityButton">
+              +
+            </button>
+            <button type="button" class="removeButton" id="removePriorButton">
+              -</button
+            ><br />
+
+            <!--Meal-->
+            <label for="todaymeal">Meal:</label><br />
+            <input
+              type="text"
+              id="todaymeal"
+              placeholder="Add meals for today"
+              maxlength="30"
+            />
+            <button type="button" class="addButton" id="addMealButton">
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeMealButton">
+              -</button
+            ><br />
+
+            <!--Grateful-->
+            <label for="grateful">I am grateful for:</label><br />
+            <input
+              type="text"
+              id="grateful"
+              placeholder="What are you grateful for today?"
+              maxlength="100"
+            />
+            <button type="button" class="addButton" id="addGratefulButton">
+              +
+            </button>
+            <button
+              type="button"
+              class="removeButton"
+              id="removeGratefulButton"
+            >
+              -</button
+            ><br />
+
+            <!--To do-->
+            <label for="todo">To do:</label><br />
+            <input
+              type="text"
+              id="todo"
+              placeholder="Add your tasks for today"
+              maxlength="60"
+            />
+            <button type="button" class="addButton" id="addToDoButton">
+              +
+            </button>
+            <button type="button" class="removeButton" id="removeToDoButton">
+              -</button
+            ><br />
+
+            <!--Appointments-->
+            <label for="appointments">Appointments:</label><br />
+            <input
+              type="text"
+              id="appointments"
+              placeholder="Add your appointments for today"
+              maxlength="60"
+            />
+            <button type="button" class="addButton" id="addAppointmentButton">
+              +
+            </button>
+            <button
+              type="button"
+              class="removeButton"
+              id="removeAppointmentButton"
+            >
+              -</button
+            ><br />
+
+            <!--Notes-->
+            <span id="notesSpan">
+              <label for="notes">Notes:</label><br />
+              <textarea
+                type="text"
+                id="notes"
+                placeholder="Add notes"
+                maxlength="200"
+              ></textarea>
+              <button type="button" class="addButton" id="addNotesButton">
+                +
+              </button>
+              <button type="button" class="removeButton" id="removeNotesButton">
+                -</button
+              ><br />
+            </span>
+
+            <!--Printing button-->
+            <button type="button" class="printButton" id="printPlan">
+              print!
+            </button>
+            <button type="button" class="clearButton" id="clearPlan">
+              clear!
+            </button>
+
+            <footer id="author">
+              created by: Patrycja Starzec, version 1.0, 2022
+            </footer>
+          </div>
+        </div>
+
+        <!--Page with Plan-->
+        <div class="col-md-8" id="pageWithPlan">
+          <div id="header" class="row g-0">
+            <h1>Day schedule</h1>
+            <p id="dateInput"></p>
+            <p id="quote"></p>
+          </div>
+          <div class="row row-flex g-0" id="formArea">
+            <div id="left_column" class="col-md-4">
+              <!--Today goals input-->
+              <div id="first_row_left" class="list">
+                <h2>Today's goals:</h2>
+                <ol id="goalsList"></ol>
+              </div>
+
+              <!--Priority input-->
+              <div id="second_row_left" class="list">
+                <h2>Priority:</h2>
+                <div id="priorityElement" class="text-input"></div>
+              </div>
+
+              <!--Meals input-->
+              <div id="third_row_left" class="list">
+                <h2>Meals:</h2>
+                <ol id="mealsList"></ol>
+              </div>
+
+              <!--Grateful input-->
+              <div id="fourth_row_left" class="list">
+                <h2>I am grateful for:</h2>
+                <div id="gratefulElement" class="text-input"></div>
+              </div>
+            </div>
+
+            <div id="rigth_column" class="col-md-8">
+              <!--To do input-->
+              <div id="first_row_right" class="list">
+                <h2>To do:</h2>
+                <ol id="toDoList"></ol>
+              </div>
+
+              <!--Appointments input-->
+              <div id="second_row_right" class="list">
+                <h2>Appointments:</h2>
+                <ol id="appointmentsList"></ol>
+              </div>
+            </div>
+          </div>
+          <span id="footer" class="row g-0" class="list">
+            <h2>Notes:</h2>
+            <div id="notesElement" class="text-input"></div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
