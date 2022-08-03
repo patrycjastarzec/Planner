@@ -2,12 +2,18 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 100;
 }
 
 /* ---NAVBAR--- */
 .tab {
   list-style-type: none;
-  height: 6vh;
   padding: 0;
   margin: 0;
   display: inline-flex;
@@ -16,9 +22,16 @@
   justify-content: center;
 }
 
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 nav {
   padding: 0;
   margin: 0;
+  height: 4rem;
 }
 
 .menu_list {
@@ -28,11 +41,29 @@ nav {
 }
 /* ---NAVBAR--- */
 
+/* ---MAIN--- */
 h1.mainpage_title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.5em;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
+
+main {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainpage_intro {
+  display: flex;
+  align-items: center;
+}
+
+/*---MAIN---*/
 
 h1 {
   font-family: "Cookie", cursive;
@@ -218,5 +249,15 @@ button[class="printButton"] {
 #clearPlan {
   font-size: 0.7em;
   color: white;
+}
+
+/*---FOOTER---*/
+footer {
+  height: 4rem;
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
 }
 
