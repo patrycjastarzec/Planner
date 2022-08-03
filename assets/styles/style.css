@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 /* ---NAVBAR--- */
 .tab {
   list-style-type: none;
@@ -213,6 +219,4 @@ button[class="printButton"] {
   font-size: 0.7em;
   color: white;
 }
-
-/*-------------------------------------*/
 
