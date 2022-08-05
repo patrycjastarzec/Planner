@@ -13,43 +13,42 @@
     />
   </head>
   <body>
-    <div class="container">
-      <nav class="menu">
-        <!--<img class="mainpage_logo" />-->
-        <ul class="menu_list">
-          <li class="tab"><a href="#">Start an app</a></li>
-          <li class="tab"><a href="#">Planning tips & tricks</a></li>
-          <li class="tab"><a href="#">About the project</a></li>
-          <li class="tab"><a href="#">Log in</a></li>
+    <header>
+      <nav>
+        <ul class="nav__list">
+          <li class="home__icon"><a href="#">ICON</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">start an app</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">planning tips & tricks</a>
+          </li>
+          <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">log in / sign up</a>
+          </li>
         </ul>
-        <button class="burger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+        <button class="hamburger">
+          <span class="hamburger__box">
+            <span class="hamburger__inner"></span>
+          </span>
         </button>
+        <script>
+          const hamburger = document.querySelector(".hamburger");
+
+          hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("hamburger--active");
+          });
+
+          const ul = document.querySelector(".nav__list");
+
+          hamburger.addEventListener("click", () => {
+            ul.classList.toggle("responsive");
+          });
+        </script>
       </nav>
-
-      <script>
-        const mobileNav = document.querySelector("ul");
-        const burgerIcon = document.querySelector(".burger");
-
-        burgerIcon.addEventListener("click", function () {
-          mobileNav.classList.toggle("active");
-          burgerIcon.classList.toggle("active");
-        });
-      </script>
-      <main>
-        <h1 class="mainpage_title">PlanIT</h1>
-        <p class="mainpage_intro">
-          Welcome to the PlanIT app! It can help you plan your day and stay more
-          productive. Fill in the form and then save or print your day plan.
-          Have fun!
-        </p>
-        <a href="subpages/planner.html">Click here to create your plan</a>
-      </main>
-      <footer class="mainpage_footer">
-        <div class="footer_author">Created by Patrycja Starzec, 2022</div>
-      </footer>
-    </div>
+    </header>
+    <main></main>
+    <footer></footer>
   </body>
 </html>
