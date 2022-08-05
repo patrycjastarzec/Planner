@@ -11,8 +11,6 @@
 
 /* ------- NAVIGATION --------*/
 
-/*----nawigacja robocze start-----*/
-
 nav {
   background-color: var(--nav-color);
 }
@@ -36,7 +34,7 @@ nav {
   text-transform: uppercase;
 }
 
-/*-----nawigacja robocze end-----*/
+/* ------- NAVIGATION --------*/
 
 /* ------ BURGER MENU ------- */
 
@@ -55,9 +53,6 @@ nav {
 
   .nav__item {
     width: 100%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
   }
 
   .nav__link {
@@ -149,7 +144,7 @@ nav {
 
   ul.responsive {
     display: inline-block;
-    width: 100%; /* teraz ja dopisałam */
+    width: 100%;
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
