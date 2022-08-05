@@ -9,32 +9,60 @@
   --nav-color: rgb(122, 122, 167);
 }
 
+body {
+  height: 100vh;
+}
+
 /* ------- NAVIGATION --------*/
 
 nav {
   background-color: var(--nav-color);
+  position: absolute;
+  width: 100%;
 }
 
 .nav__list {
   display: flex;
   justify-content: space-around;
+  text-align: center;
 }
 
 .nav__item {
   border-style: solid;
   list-style: none;
   width: 22.5%;
-  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 6ch;
 }
 
 .nav__link {
   text-transform: uppercase;
 }
 
-/* ------- NAVIGATION --------*/
+/* ------- NAVIGATION END--------*/
+
+/*------CONTAINER START-----------*/
+
+.container {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 167, 216);
+}
+
+footer {
+  height: 5%;
+}
 
 /* ------ BURGER MENU ------- */
 
