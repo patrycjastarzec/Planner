@@ -13,75 +13,35 @@
     />
   </head>
   <body>
-    <div class="gradient">
-      <ul class="gradient__nav">
-        <li class="gradient__item home__icon"><a href="" #>ICON</a></li>
-        <li class="gradient__item"><a href="" #>CREATE A PLAN</a></li>
-        <li class="gradient__item">
+    <div class="container">
+      <ul class="navigation__list">
+        <li class="navigation__item navigation__icon"><a href="" #>ICON</a></li>
+        <li class="navigation__item"><a href="" #>CREATE A PLAN</a></li>
+        <li class="navigation__item">
           <a href="" #>PLANNING TIPS & TRICKS</a>
         </li>
-        <li class="gradient__item"><a href="" #>ABOUT</a></li>
-        <li class="gradient__item"><a href="" #>LOG IN / SIGN UP</a></li>
+        <li class="navigation__item"><a href="" #>ABOUT</a></li>
+        <li class="navigation__item"><a href="" #>LOG IN / SIGN UP</a></li>
       </ul>
-      <button class="gradient__button">
-        <span class="gradient__button__box">
-          <span class="gradient__button__inner"></span>
+      <button class="navigation__button">
+        <span class="navigation__button__box">
+          <span class="navigation__button__inner"></span>
         </span>
       </button>
 
       <script>
-        const gradient__button = document.querySelector(".gradient__button");
-        const gradient__nav = document.querySelector(".gradient__nav");
+        const navigation__button = document.querySelector(
+          ".navigation__button"
+        );
+        const navigation__list = document.querySelector(".navigation__list");
 
-        gradient__button.addEventListener("click", () => {
-          gradient__nav.classList.toggle("gradient__responsive");
-          gradient__button.classList.toggle("gradient__button--active");
+        navigation__button.addEventListener("click", () => {
+          navigation__list.classList.toggle("navigation__responsive");
+          navigation__button.classList.toggle("navigation__button--active");
         });
       </script>
 
-      <div class="gradient__main">MAIN</div>
+      <div class="main">MAIN</div>
     </div>
-
-    <!-- <div class="container__gradient">
-    <header>
-      <nav>
-        <ul class="nav__list">
-          <li class="home__icon"><a href="#">ICON</a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">start an app</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">planning tips & tricks</a>
-          </li>
-          <li class="nav__item"><a href="#" class="nav__link">about</a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">log in / sign up</a>
-          </li>
-        </ul>
-        <button class="hamburger">
-          <span class="hamburger__box">
-            <span class="hamburger__inner"></span>
-          </span>
-        </button>
-        <script>
-          const hamburger = document.querySelector(".hamburger");
-
-          hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("hamburger--active");
-          });
-
-          const ul = document.querySelector(".nav__list");
-
-          hamburger.addEventListener("click", () => {
-            ul.classList.toggle("responsive");
-          });
-        </script>
-      </nav>
-    </header> -->
-    <!-- <div class="container"> -->
-    <!-- <main>MAIN</main> -->
-    <!-- </div> class="container"-->
-    <!-- </div> class="container__gradient"-->
-    <!-- <footer>FOOTER</footer> -->
   </body>
 </html>
