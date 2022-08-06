@@ -47,14 +47,10 @@ body {
 
   display: flex;
   justify-content: center;
-
-  /* border-style: dashed;
-  border-width: 2px; */
 }
 
 .main__left {
   padding: 5%;
-  background-color: aquamarine;
   height: 100%;
   width: 50%;
   display: flex;
@@ -64,9 +60,6 @@ body {
 }
 
 .main__title {
-  /* height: 30%; */
-  /* font-family: "Inter"; */
-  /* flex-grow: 1; */
   font-style: normal;
   font-weight: 600;
   font-size: 7vw;
@@ -171,6 +164,11 @@ body {
 
   ul.navigation__responsive li {
     display: block;
+    background-color: #ffffff;
+  }
+
+  ul.navigation__list {
+    background-color: #ffffff;
   }
 
   li:nth-child(2),
