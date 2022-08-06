@@ -14,8 +14,8 @@ body {
   padding: 4%;
   background-color: aquamarine;
   /* display: flex;
-  justify-content: center;
-  align-items: center; */
+    justify-content: center;
+    align-items: center; */
 }
 
 .gradient {
@@ -50,12 +50,11 @@ body {
 
 .gradient__item {
   list-style: none;
-  /* margin: 10px; */
 }
 
 /* ------- NAVIGATION --------*/
 
-/* nav {
+nav {
   background-color: var(--nav-color);
   position: absolute;
   width: 100%;
@@ -79,7 +78,7 @@ body {
 
 .nav__link {
   text-transform: uppercase;
-} */
+}
 
 /* ------- NAVIGATION END--------*/
 
@@ -100,16 +99,16 @@ main {
   background-color: rgb(234, 167, 216);
 }
 
-/* footer {
+footer {
   height: 5%;
   background-color: blueviolet;
-} */
+}
 
 /* ------ BURGER MENU ------- */
 
-/* .hamburger {
+.hamburger {
   display: none;
-} */
+}
 
 .home__icon {
   display: none;
@@ -145,10 +144,6 @@ main {
     border-radius: 0;
   }
 
-  .gradient__item {
-    padding: 10px;
-  }
-
   .gradient__main {
     position: static;
     display: flex;
@@ -159,10 +154,10 @@ main {
   ul.gradient__responsive li {
     display: block;
     /* text-align: justify;
-    float: none; */
+      float: none; */
   }
 
-  /* .nav__list {
+  .nav__list {
     display: inline;
   }
 
@@ -173,7 +168,7 @@ main {
   .nav__link {
     position: relative;
     top: 40%;
-  } */
+  }
 
   li:nth-child(2),
   li:nth-child(3),
@@ -189,7 +184,7 @@ main {
     padding: 10px;
   }
 
-  /* .hamburger {
+  .hamburger {
     display: inline-block;
     background-color: transparent;
     border: 0;
@@ -197,22 +192,22 @@ main {
     padding: 10px;
 
     position: fixed;
-    right: 0; */
-  /* right: 0;
-    top: 0; */
-  /* z-index: 1;
-  } */
+    right: 0;
+    /* right: 0;
+      top: 0; */
+    z-index: 1;
+  }
 
-  /* .hamburger__box {
+  .hamburger__box {
     width: 30px;
     height: 30px;
     display: inline-block;
     position: relative;
-  } */
+  }
 
-  .gradient__button__inner,
-  .gradient__button__inner::before,
-  .gradient__button__inner::after {
+  .hamburger__inner,
+  .hamburger__inner::before,
+  .hamburger__inner::after {
     width: 100%;
     height: 3px;
     background-color: rgb(0, 0, 0);
@@ -220,60 +215,60 @@ main {
     left: 0;
   }
 
-  .gradient__button__inner {
+  .hamburger__inner {
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .gradient__button__inner::before,
-  .gradient__button__inner::after {
+  .hamburger__inner::before,
+  .hamburger__inner::after {
     content: "";
   }
 
-  .gradient__button__inner::before {
+  .hamburger__inner::before {
     top: -10px;
   }
 
-  .gradient__button__inner::after {
+  .hamburger__inner::after {
     top: 10px;
   }
 
-  /* .gradient__button--active {
+  .hamburger--active {
     z-index: 1;
-  } */
+  }
 
-  .gradient__button--active .gradient__button__inner {
+  .hamburger--active .hamburger__inner {
     background-color: transparent;
   }
 
-  .gradient__button--active .gradient__button__inner::before {
+  .hamburger--active .hamburger__inner::before {
     transform: translateY(10px) rotate(45deg);
   }
 
-  .gradient__button--active .gradient__button__inner::after {
+  .hamburger--active .hamburger__inner::after {
     transform: translateY(-10px) rotate(-45deg);
   }
 
-  /* ul {
+  ul {
     background-color: rgb(122, 122, 167);
-  } */
+  }
 
-  /* ul.responsive {
+  ul.responsive {
     display: inline-block;
     width: 100%;
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
     background-color: rgb(122, 122, 167);
-  } */
+  }
 
-  /* ul.responsive li {
+  ul.responsive li {
     display: block;
     text-align: left;
     float: none;
-  } */
+  }
 
-  /* a.nav__link {
+  a.nav__link {
     margin-left: 10px;
-  } */
+  }
 }

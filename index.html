@@ -13,6 +13,36 @@
     />
   </head>
   <body>
+    <div class="gradient">
+      <ul class="gradient__nav">
+        <li class="gradient__item home__icon"><a href="" #>ICON</a></li>
+        <li class="gradient__item"><a href="" #>CREATE A PLAN</a></li>
+        <li class="gradient__item">
+          <a href="" #>PLANNING TIPS & TRICKS</a>
+        </li>
+        <li class="gradient__item"><a href="" #>ABOUT</a></li>
+        <li class="gradient__item"><a href="" #>LOG IN / SIGN UP</a></li>
+      </ul>
+      <button class="gradient__button">
+        <span class="gradient__button__box">
+          <span class="gradient__button__inner"></span>
+        </span>
+      </button>
+
+      <script>
+        const gradient__button = document.querySelector(".gradient__button");
+        const gradient__nav = document.querySelector(".gradient__nav");
+
+        gradient__button.addEventListener("click", () => {
+          gradient__nav.classList.toggle("gradient__responsive");
+          gradient__button.classList.toggle("gradient__button--active");
+        });
+      </script>
+
+      <div class="gradient__main">MAIN</div>
+    </div>
+
+    <!-- <div class="container__gradient">
     <header>
       <nav>
         <ul class="nav__list">
@@ -47,10 +77,11 @@
           });
         </script>
       </nav>
-    </header>
-    <div class="container">
-      <main>MAIN</main>
-      <footer>FOOTER</footer>
-    </div>
+    </header> -->
+    <!-- <div class="container"> -->
+    <!-- <main>MAIN</main> -->
+    <!-- </div> class="container"-->
+    <!-- </div> class="container__gradient"-->
+    <!-- <footer>FOOTER</footer> -->
   </body>
 </html>
