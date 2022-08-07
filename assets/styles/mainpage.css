@@ -176,6 +176,12 @@ a:active {
     text-align: center;
   }
 
+  .main__button {
+    margin: 2.5% 0% 2.5% 0%;
+    height: 15%;
+    width: 30%;
+  }
+
   ul.navigation__responsive li {
     display: block;
     background-color: #ffffff;
