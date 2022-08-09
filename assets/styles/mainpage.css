@@ -99,34 +99,32 @@ body {
 }
 
 .main__row {
-  background-color: blueviolet;
   width: 100%;
-  flex: 1;
   margin: 3% 0% 3% 0%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
   text-transform: uppercase;
   font-size: 12px;
-  color: rgb(118, 118, 118);
 }
 
 .main__row:nth-child(1) {
-  background: rgba(199, 191, 216, 0.47);
+  background: rgba(199, 191, 216, 0.5);
 }
 
 .main__row:nth-child(2) {
-  background: rgba(222, 213, 240, 0.47);
+  background: rgba(222, 213, 240, 0.5);
 }
 
 .main__row:nth-child(3) {
-  background: rgba(234, 224, 255, 0.47);
+  background: rgba(234, 224, 255, 0.5);
 }
 
 .main__row:nth-child(4) {
-  background: rgba(243, 237, 255, 0.47);
+  background: rgba(243, 237, 255, 0.5);
 }
 
 .navigation__list {
@@ -142,9 +140,9 @@ body {
 
 .navigation__item {
   list-style: none;
-  flex-grow: 1;
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .navigation__button {
@@ -152,8 +150,8 @@ body {
 }
 
 .navigation__link {
-  color: rgb(0, 0, 0);
   margin: auto;
+  color: rgb(0, 0, 0);
 }
 
 .navigation__link:link,
