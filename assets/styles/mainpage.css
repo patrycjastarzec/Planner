@@ -148,10 +148,6 @@ body {
   flex-grow: 1;
 }
 
-.navigation__icon {
-  display: none;
-}
-
 .navigation__button {
   display: none;
 }
