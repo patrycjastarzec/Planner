@@ -29,16 +29,6 @@ body {
   border-radius: 40px;
 }
 
-.navigation__list {
-  position: absolute;
-  top: 2.5%;
-  width: 100%;
-
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-
 .main {
   position: absolute;
   top: 6%;
@@ -140,12 +130,21 @@ body {
 }
 
 .navigation__list {
+  position: absolute;
+  top: 2.5%;
+  width: 100%;
+  height: 5%;
+
   display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .navigation__item {
   list-style: none;
   flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .navigation__button {
@@ -154,6 +153,7 @@ body {
 
 .navigation__link {
   color: rgb(0, 0, 0);
+  margin: auto;
 }
 
 .navigation__link:link,
@@ -163,32 +163,31 @@ body {
   text-decoration: none;
 }
 
+.navigation__icon > .navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__square {
+  width: 20px;
+  height: 20px;
+  rotate: 45deg;
+  top: 3.5px;
+  border-radius: 3px;
+}
+
+.icon__square:nth-child(1) {
+  background-color: rgba(199, 191, 216);
+}
+
+.icon__square:nth-child(2) {
+  background-color: rgb(92, 84, 109);
+}
+
 @media screen and (max-width: 600px) {
   .container {
     border-radius: 0;
-  }
-
-  .navigation__button {
-    position: absolute;
-    right: 0;
-    margin: 10px;
-    height: 30px;
-    width: 30px;
-
-    display: inline-block;
-
-    border: 0;
-    background-color: transparent;
-  }
-
-  .navigation__list {
-    position: absolute;
-    top: 0;
-    display: inline;
-  }
-
-  .navigation__item {
-    padding: 10px;
   }
 
   .main {
@@ -231,13 +230,34 @@ body {
     width: 30%;
   }
 
+  .navigation__button {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+
+    display: inline-block;
+
+    border: 0;
+    background-color: transparent;
+  }
+
+  .navigation__list {
+    position: absolute;
+    top: 0;
+    display: inline;
+    background-color: #ffffff;
+    height: auto;
+  }
+
   ul.navigation__responsive li {
     display: block;
     background-color: #ffffff;
   }
 
-  ul.navigation__list {
-    background-color: #ffffff;
+  ul.navigation__responsive li:not(.navigation__icon) {
+    margin: 25px 0px 25px 0px;
   }
 
   li:nth-child(2),
@@ -249,10 +269,13 @@ body {
   }
 
   .navigation__icon {
-    padding: 10px;
-    width: 50px;
+    width: 60px;
     height: 50px;
     display: block;
+  }
+
+  .navigation__icon > .navigation__link {
+    height: 100%;
   }
 
   .navigation__button__inner,
