@@ -108,19 +108,24 @@ nav {
   background: #7c7393;
 }
 
+#navigation__login:hover {
+  background: #5b5272;
+}
+
 #navigation__signup {
   background: #97959b;
   margin-left: 15px;
 }
 
+#navigation__signup:hover {
+  background: #7a787d;
+}
+
 .main {
   height: 92.5%;
-
   padding: 100px 0px 100px 0px;
-
   display: flex;
   justify-content: center;
-
   flex-grow: 1;
 }
 
@@ -160,6 +165,10 @@ nav {
   border-style: none;
   cursor: pointer;
   margin-left: 6px;
+}
+
+.main__button:hover {
+  background-color: rgba(199, 191, 216);
 }
 
 .main__right {
