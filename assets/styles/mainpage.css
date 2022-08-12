@@ -112,9 +112,17 @@ nav {
   background: #5b5272;
 }
 
+#navigation__login:active {
+  transform: translateY(2px);
+}
+
 #navigation__signup {
   background: #97959b;
   margin-left: 15px;
+}
+
+#navigation__signup:active {
+  transform: translateY(2px);
 }
 
 #navigation__signup:hover {
@@ -169,6 +177,10 @@ nav {
 
 .main__button:hover {
   background-color: rgba(199, 191, 216);
+}
+
+.main__button:active {
+  transform: translateY(2px);
 }
 
 .main__right {
