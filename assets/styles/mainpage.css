@@ -105,11 +105,11 @@ nav {
 }
 
 #navigation__login {
-  background: #7c7393;
+  background: rgb(134, 122, 158);
 }
 
 #navigation__login:hover {
-  background: #5b5272;
+  background: rgb(92, 84, 109);
 }
 
 #navigation__login:active {
@@ -117,7 +117,7 @@ nav {
 }
 
 #navigation__signup {
-  background: #97959b;
+  background: rgb(219, 209, 239);
   margin-left: 15px;
 }
 
@@ -126,7 +126,7 @@ nav {
 }
 
 #navigation__signup:hover {
-  background: #7a787d;
+  background: rgba(199, 191, 216);
 }
 
 .main {
