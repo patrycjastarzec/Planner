@@ -161,8 +161,14 @@ li:nth-child(4):hover {
   font-size: 2vh;
 }
 
-.main__button {
+#button__link {
   height: 20%;
+  width: 10vw;
+  margin-left: 6px;
+}
+
+.main__button {
+  height: 100%;
   width: 10vw;
   text-transform: uppercase;
   font-weight: bold;
@@ -171,7 +177,6 @@ li:nth-child(4):hover {
   border-radius: 5px;
   border-style: none;
   cursor: pointer;
-  margin-left: 6px;
 }
 
 .main__button:hover {
