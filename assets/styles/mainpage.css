@@ -146,7 +146,6 @@ li:nth-child(4):hover {
   font-style: normal;
   font-weight: 600;
   font-size: 7vw;
-  line-height: 155px;
   display: flex;
   align-items: center;
 }
@@ -287,10 +286,12 @@ li:nth-child(4):hover {
     margin: 0;
   }
 
-  .main__button {
-    margin: 2.5% 0% 2.5% 0%;
-    height: 10%;
+  #button__link {
     width: 50%;
+  }
+
+  .main__button {
+    width: 100%;
   }
 
   .navigation__list {
