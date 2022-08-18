@@ -1,7 +1,18 @@
 /*Copyright (C) 2016 Donnie Ray Jones Information anout the author and licence: https://gist.github.com/donnierayjones/6fd9802d992b2d8d6cfd */
 
 @media print {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12 {
     float: left;
   }
   .col-md-12 {
@@ -196,83 +207,86 @@
   .row-flex {
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
-/*----------------------------------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------------------------------*/
 
-h1{
-    font-family: 'Cookie', cursive;
+  h1 {
+    font-family: "Overpass", sans-serif;
     font-size: 2.5em;
     text-align: center;
-}
+  }
 
-h2{
-    font-family: 'Cookie', cursive;
+  h2 {
+    font-family: "Overpass", sans-serif;
     font-size: 1.6em;
     text-align: center;
     margin: 0px;
-}
+  }
 
-ol{
-    font-family: 'Tajawal', sans-serif;
+  ol {
+    font-family: "Overpass", sans-serif;
     font-size: 0.8em;
-}
+  }
 
-.text-input{
-    font-family: 'Tajawal', sans-serif;
+  .text-input {
+    font-family: "Overpass", sans-serif;
     font-size: 0.8em;
-}
+  }
 
-#dateInput{
-  text-align: center;
-  font-family: 'Cookie', cursive;
-  font-size: 1.2em;
-  margin: 0;
-}
+  #dateInput {
+    text-align: center;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+  }
 
-#quote{
-  text-align: center;
-  font-family: 'Cookie', cursive;
-  font-size: 1.25em;
-  color:rgb(80, 80, 80);
-  margin-top: 5px;
-}
+  #quote {
+    text-align: center;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.25em;
+    color: rgb(80, 80, 80);
+    margin-top: 5px;
+  }
 
-.list{
+  .list {
     padding: 5px;
-}
+  }
 
-#pageWithPlan{
+  #pageWithPlan {
     background-color: rgb(191, 214, 214);
     width: 1600px;
-}
+  }
 
-#header{
+  #header {
     height: 150px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
-}
+  }
 
-#first_row_left, #second_row_left, #third_row_left, #fourth_row_left{
+  #first_row_left,
+  #second_row_left,
+  #third_row_left,
+  #fourth_row_left {
     height: 150px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
-}
+  }
 
-#first_row_right, #second_row_right{
+  #first_row_right,
+  #second_row_right {
     height: 300px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
-}
+  }
 
-#footer{
+  #footer {
     height: 200px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
-}
-
+  }
 }

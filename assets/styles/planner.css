@@ -1,23 +1,23 @@
 h1 {
-  font-family: "Cookie", cursive;
+  font-family: "Overpass", sans-serif;
   font-size: 2.5em;
   text-align: center;
 }
 
 h2 {
-  font-family: "Cookie", cursive;
+  font-family: "Overpass", sans-serif;
   font-size: 1.6em;
   text-align: center;
   margin: 0px;
 }
 
 ol {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-size: 0.8em;
 }
 
 .text-input {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-size: 0.8em;
   padding: 5px;
 }
@@ -27,13 +27,13 @@ ol {
 }
 
 label {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Overpass", sans-serif;
   padding-top: 15px;
   font-weight: 700;
 }
 
 input[type="text"] {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Overpass", sans-serif;
   color: gray;
   font-size: 0.8em;
   font-style: italic;
@@ -54,7 +54,7 @@ textarea {
 }
 
 textarea[type="text"] {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Overpass", sans-serif;
   color: gray;
   font-size: 0.8em;
   font-style: italic;
@@ -76,21 +76,21 @@ textarea[type="text"] {
 
 #dateInput {
   text-align: center;
-  font-family: "Tajawal", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-size: 1.2em;
   margin: 0;
 }
 
 #quote {
   text-align: center;
-  font-family: "Cookie", cursive;
+  font-family: "Overpass", sans-serif;
   font-size: 1.25em;
   color: rgb(80, 80, 80);
   margin-top: 5px;
 }
 
 #intro {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Overpass", sans-serif;
   text-align: justify;
   padding-right: 10px;
 }
