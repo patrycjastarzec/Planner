@@ -16,6 +16,10 @@ ol {
   font-size: 0.8em;
 }
 
+.row {
+  background: rgb(234, 224, 255);
+}
+
 .text-input {
   font-family: "Overpass", sans-serif;
   font-size: 0.8em;
@@ -97,13 +101,11 @@ textarea[type="text"] {
 }
 
 #form-area {
-  background-color: rgb(226, 238, 238);
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #pageWithPlan {
-  background-color: rgb(191, 214, 214);
   padding-top: 20px;
   padding-bottom: 20px;
 }
