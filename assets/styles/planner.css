@@ -67,6 +67,7 @@ textarea[type="text"] {
 
 #notesSpan {
   display: inline-block;
+  width: 100%;
 }
 
 #addNotesButton,
