@@ -1,4 +1,5 @@
-h1 {
+.form-page__intro__title,
+.plan-page__intro__title {
   font-family: "Overpass", sans-serif;
   font-size: 2.5em;
   text-align: center;
@@ -16,9 +17,11 @@ ol {
   font-size: 0.8em;
 }
 
+/* bootstrap class */
 .row {
   background: rgb(234, 224, 255);
 }
+/*------------------*/
 
 .text-input {
   font-family: "Overpass", sans-serif;
@@ -69,7 +72,7 @@ textarea[type="text"] {
   height: 100px;
 }
 
-#notesSpan {
+.notesSpan {
   display: inline-block;
   width: 100%;
 }
@@ -94,7 +97,7 @@ textarea[type="text"] {
   margin-top: 5px;
 }
 
-#intro {
+.form-page__intro__description {
   font-family: "Overpass", sans-serif;
   text-align: justify;
   padding-right: 10px;
@@ -148,14 +151,35 @@ textarea[type="text"] {
   position: relative;
 }
 
+.form-page__row {
+  display: flex;
+}
+
+.form-page__buttons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
 /*-------------BUTTONS-----------------*/
-button {
+
+.addButton,
+.removeButton {
   background-color: rgb(72, 145, 145);
   border-width: 0;
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
   box-shadow: 2.5px 2.5px 5px grey;
-  border-radius: 10%;
+  border-radius: 50%;
+}
+
+.addButton {
+  margin-right: 6px;
+}
+
+.removeButton {
+  margin-left: 6px;
 }
 
 button:hover {
@@ -168,14 +192,15 @@ button:hover {
   width: 40px;
 }
 
-button[class="printButton"] {
-  margin-top: 20px;
-}
 .addButton,
-.removeButton,
+.removeButton {
+  font-size: 1.5em;
+  color: white;
+}
+
 #printPlan,
 #clearPlan {
-  font-size: 0.7em;
+  font-size: 1em;
   color: white;
 }
 

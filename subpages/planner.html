@@ -40,10 +40,10 @@
       <div class="row">
         <!--Form Area-->
         <div class="col-md-4" id="form-area">
-          <div>
-            <div>
-              <h1>Hello!</h1>
-              <p id="intro">
+          <div class="form-page">
+            <div class="form-page__intro">
+              <h1 class="form-page__intro__title">Hello!</h1>
+              <p class="form-page__intro__description">
                 This app is created to help you plan your day and stay more
                 productive. Fill out the form and add the elements from below to
                 the layout. You can print it and follow your plan through the
@@ -51,134 +51,194 @@
               </p>
             </div>
             <!--Today goal-->
-            <label for="todaygoal">Today's goals:</label><br />
-            <input
-              type="text"
-              id="todaygoal"
-              placeholder="Add goals for today"
-              maxlength="30"
-            />
-            <button type="button" class="addButton" id="addGoalButton">
-              +
-            </button>
-            <button type="button" class="removeButton" id="removeGoalButton">
-              -</button
-            ><br />
-
+            <div class="form-page__row todaygoal">
+              <div class="form-page__input">
+                <label for="todaygoal">Today's goals:</label>
+                <input
+                  type="text"
+                  id="todaygoal"
+                  placeholder="Add goals for today"
+                  maxlength="30"
+                />
+              </div>
+              <div class="form-page__buttons">
+                <button type="button" class="addButton" id="addGoalButton">
+                  +
+                </button>
+                <button
+                  type="button"
+                  class="removeButton"
+                  id="removeGoalButton"
+                >
+                  -
+                </button>
+              </div>
+            </div>
             <!--Priority-->
-            <label for="priority">Priority:</label><br />
-            <input
-              type="text"
-              id="priority"
-              placeholder="Add priority for today"
-              maxlength="100"
-            />
-            <button type="button" class="addButton" id="addPriorityButton">
-              +
-            </button>
-            <button type="button" class="removeButton" id="removePriorButton">
-              -</button
-            ><br />
-
+            <div class="form-page__row priority">
+              <div class="form-page__input">
+                <label for="priority">Priority:</label>
+                <input
+                  type="text"
+                  id="priority"
+                  placeholder="Add priority for today"
+                  maxlength="100"
+                />
+              </div>
+              <div class="form-page__buttons">
+                <button type="button" class="addButton" id="addPriorityButton">
+                  +
+                </button>
+                <button
+                  type="button"
+                  class="removeButton"
+                  id="removePriorButton"
+                >
+                  -
+                </button>
+              </div>
+            </div>
             <!--Meal-->
-            <label for="todaymeal">Meal:</label><br />
-            <input
-              type="text"
-              id="todaymeal"
-              placeholder="Add meals for today"
-              maxlength="30"
-            />
-            <button type="button" class="addButton" id="addMealButton">
-              +
-            </button>
-            <button type="button" class="removeButton" id="removeMealButton">
-              -</button
-            ><br />
-
+            <div class="form-page__row meal">
+              <div class="form-page__input">
+                <label for="todaymeal">Meal:</label>
+                <input
+                  type="text"
+                  id="todaymeal"
+                  placeholder="Add meals for today"
+                  maxlength="30"
+                />
+              </div>
+              <div class="form-page__buttons">
+                <button type="button" class="addButton" id="addMealButton">
+                  +
+                </button>
+                <button
+                  type="button"
+                  class="removeButton"
+                  id="removeMealButton"
+                >
+                  -
+                </button>
+              </div>
+            </div>
             <!--Grateful-->
-            <label for="grateful">I am grateful for:</label><br />
-            <input
-              type="text"
-              id="grateful"
-              placeholder="What are you grateful for today?"
-              maxlength="100"
-            />
-            <button type="button" class="addButton" id="addGratefulButton">
-              +
-            </button>
-            <button
-              type="button"
-              class="removeButton"
-              id="removeGratefulButton"
-            >
-              -</button
-            ><br />
-
+            <div class="form-page__row grateful">
+              <div class="form-page__input">
+                <label for="grateful">I am grateful for:</label>
+                <input
+                  type="text"
+                  id="grateful"
+                  placeholder="What are you grateful for today?"
+                  maxlength="100"
+                />
+              </div>
+              <div class="form-page__buttons">
+                <button type="button" class="addButton" id="addGratefulButton">
+                  +
+                </button>
+                <button
+                  type="button"
+                  class="removeButton"
+                  id="removeGratefulButton"
+                >
+                  -
+                </button>
+              </div>
+            </div>
             <!--To do-->
-            <label for="todo">To do:</label><br />
-            <input
-              type="text"
-              id="todo"
-              placeholder="Add your tasks for today"
-              maxlength="60"
-            />
-            <button type="button" class="addButton" id="addToDoButton">
-              +
-            </button>
-            <button type="button" class="removeButton" id="removeToDoButton">
-              -</button
-            ><br />
-
+            <div class="form-page__row todo">
+              <div class="form-page__input">
+                <label for="todo">To do:</label>
+                <input
+                  type="text"
+                  id="todo"
+                  placeholder="Add your tasks for today"
+                  maxlength="60"
+                />
+              </div>
+              <div class="form-page__buttons">
+                <button type="button" class="addButton" id="addToDoButton">
+                  +
+                </button>
+                <button
+                  type="button"
+                  class="removeButton"
+                  id="removeToDoButton"
+                >
+                  -
+                </button>
+              </div>
+            </div>
             <!--Appointments-->
-            <label for="appointments">Appointments:</label><br />
-            <input
-              type="text"
-              id="appointments"
-              placeholder="Add your appointments for today"
-              maxlength="60"
-            />
-            <button type="button" class="addButton" id="addAppointmentButton">
-              +
-            </button>
-            <button
-              type="button"
-              class="removeButton"
-              id="removeAppointmentButton"
-            >
-              -</button
-            ><br />
-
+            <div class="form-page__row appointments">
+              <div class="form-page__input">
+                <label for="appointments">Appointments:</label>
+                <input
+                  type="text"
+                  id="appointments"
+                  placeholder="Add your appointments for today"
+                  maxlength="60"
+                />
+              </div>
+              <div class="form-page__buttons">
+                <button
+                  type="button"
+                  class="addButton"
+                  id="addAppointmentButton"
+                >
+                  +
+                </button>
+                <button
+                  type="button"
+                  class="removeButton"
+                  id="removeAppointmentButton"
+                >
+                  -
+                </button>
+              </div>
+            </div>
             <!--Notes-->
-            <span id="notesSpan">
-              <label for="notes">Notes:</label><br />
-              <textarea
-                type="text"
-                id="notes"
-                placeholder="Add notes"
-                maxlength="200"
-              ></textarea>
-              <button type="button" class="addButton" id="addNotesButton">
-                +
-              </button>
-              <button type="button" class="removeButton" id="removeNotesButton">
-                -</button
-              ><br />
-            </span>
+            <div class="form-page__row notesSpan">
+              <div class="form-page__input">
+                <label for="notes">Notes:</label>
+                <textarea
+                  type="text"
+                  id="notes"
+                  placeholder="Add notes"
+                  maxlength="200"
+                ></textarea>
+              </div>
+              <div class="form-page__buttons">
+                <button type="button" class="addButton" id="addNotesButton">
+                  +
+                </button>
+                <button
+                  type="button"
+                  class="removeButton"
+                  id="removeNotesButton"
+                >
+                  -
+                </button>
+              </div>
+            </div>
 
             <!--Printing button-->
-            <button type="button" class="printButton" id="printPlan">
-              print!
-            </button>
-            <button type="button" class="clearButton" id="clearPlan">
-              clear!
-            </button>
+            <div class="form-page__row buttons">
+              <button type="button" class="printButton" id="printPlan">
+                print!
+              </button>
+              <button type="button" class="clearButton" id="clearPlan">
+                clear!
+              </button>
+            </div>
           </div>
         </div>
 
         <!--Page with Plan-->
         <div class="col-md-8" id="pageWithPlan">
           <div id="header" class="row g-0">
-            <h1>Day schedule</h1>
+            <h1 class="plan-page__intro__title">Day schedule</h1>
             <p id="dateInput"></p>
             <p id="quote"></p>
           </div>
