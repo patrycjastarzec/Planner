@@ -40,6 +40,7 @@
       <div class="row">
         <!--Form Area-->
         <div class="col-md-4 form-area">
+          <!--Introduction-->
           <div class="form-area__intro">
             <h1 class="form-area__intro__title">Hello!</h1>
             <p class="form-area__intro__description">
@@ -48,15 +49,19 @@
               the layout. You can print it and follow your plan through the day!
             </p>
           </div>
+
           <!--Today goal-->
-          <div class="form-area__row todaygoal">
+          <div class="form-area__row">
             <div class="form-area__input">
-              <label for="todaygoal">Today's goals:</label>
+              <label for="todaygoal" class="form-area__label"
+                >Today's goals:</label
+              >
               <input
                 type="text"
                 id="todaygoal"
                 placeholder="Add goals for today"
                 maxlength="30"
+                class="form-area__input-area"
               />
             </div>
             <div class="form-area__buttons">
@@ -68,15 +73,17 @@
               </button>
             </div>
           </div>
+
           <!--Priority-->
-          <div class="form-area__row priority">
+          <div class="form-area__row">
             <div class="form-area__input">
-              <label for="priority">Priority:</label>
+              <label for="priority" class="form-area__label">Priority:</label>
               <input
                 type="text"
                 id="priority"
                 placeholder="Add priority for today"
                 maxlength="100"
+                class="form-area__input-area"
               />
             </div>
             <div class="form-area__buttons">
@@ -88,15 +95,17 @@
               </button>
             </div>
           </div>
+
           <!--Meal-->
-          <div class="form-area__row meal">
+          <div class="form-area__row">
             <div class="form-area__input">
-              <label for="todaymeal">Meal:</label>
+              <label for="todaymeal" class="form-area__label">Meal:</label>
               <input
                 type="text"
                 id="todaymeal"
                 placeholder="Add meals for today"
                 maxlength="30"
+                class="form-area__input-area"
               />
             </div>
             <div class="form-area__buttons">
@@ -108,15 +117,19 @@
               </button>
             </div>
           </div>
+
           <!--Grateful-->
-          <div class="form-area__row grateful">
+          <div class="form-area__row">
             <div class="form-area__input">
-              <label for="grateful">I am grateful for:</label>
+              <label for="grateful" class="form-area__label"
+                >I am grateful for:</label
+              >
               <input
                 type="text"
                 id="grateful"
                 placeholder="What are you grateful for today?"
                 maxlength="100"
+                class="form-area__input-area"
               />
             </div>
             <div class="form-area__buttons">
@@ -132,15 +145,17 @@
               </button>
             </div>
           </div>
+
           <!--To do-->
-          <div class="form-area__row todo">
+          <div class="form-area__row">
             <div class="form-area__input">
-              <label for="todo">To do:</label>
+              <label for="todo" class="form-area__label">To do:</label>
               <input
                 type="text"
                 id="todo"
                 placeholder="Add your tasks for today"
                 maxlength="60"
+                class="form-area__input-area"
               />
             </div>
             <div class="form-area__buttons">
@@ -152,15 +167,19 @@
               </button>
             </div>
           </div>
+
           <!--Appointments-->
-          <div class="form-area__row appointments">
+          <div class="form-area__row">
             <div class="form-area__input">
-              <label for="appointments">Appointments:</label>
+              <label for="appointments" class="form-area__label"
+                >Appointments:</label
+              >
               <input
                 type="text"
                 id="appointments"
                 placeholder="Add your appointments for today"
                 maxlength="60"
+                class="form-area__input-area"
               />
             </div>
             <div class="form-area__buttons">
@@ -176,15 +195,17 @@
               </button>
             </div>
           </div>
+
           <!--Notes-->
-          <div class="form-area__row notesSpan">
+          <div class="form-area__row">
             <div class="form-area__input">
-              <label for="notes">Notes:</label>
+              <label for="notes" class="form-area__label">Notes:</label>
               <textarea
                 type="text"
                 id="notes"
                 placeholder="Add notes"
                 maxlength="200"
+                class="form-area__text-area"
               ></textarea>
             </div>
             <div class="form-area__buttons">
@@ -196,6 +217,7 @@
               </button>
             </div>
           </div>
+
           <!--Printing button-->
           <div class="form-area__buttons">
             <button type="button" class="printButton" id="printPlan">
@@ -208,56 +230,56 @@
         </div>
 
         <!--Page with Plan-->
-        <div class="col-md-8" id="pageWithPlan">
-          <div id="header" class="row g-0">
-            <h1 class="plan-page__intro__title">Day schedule</h1>
-            <p id="dateInput"></p>
-            <p id="quote"></p>
+        <div class="col-md-8 plan-area">
+          <div class="row g-0 plan-area__header">
+            <h1 class="plan-area__intro__title">Day schedule</h1>
+            <p class="plan-area__date"></p>
+            <p class="plan-area__quote"></p>
           </div>
-          <div class="row row-flex g-0" id="formArea">
-            <div id="left_column" class="col-md-4">
+          <div class="row row-flex g-0">
+            <div class="col-md-4 plan-area__left-column">
               <!--Today goals input-->
-              <div id="first_row_left" class="list">
-                <h2>Today's goals:</h2>
-                <ol id="goalsList"></ol>
+              <div class="plan-area__left-column__row">
+                <h2 class="plan-area__list-title">Today's goals:</h2>
+                <ol id="goalsList" class="plan-area__list"></ol>
               </div>
 
               <!--Priority input-->
-              <div id="second_row_left" class="list">
-                <h2>Priority:</h2>
-                <div id="priorityElement" class="text-input"></div>
+              <div class="plan-area__left-column__row">
+                <h2 class="plan-area__list-title">Priority:</h2>
+                <div id="priorityElement" class="plan-area__text-input"></div>
               </div>
 
               <!--Meals input-->
-              <div id="third_row_left" class="list">
-                <h2>Meals:</h2>
-                <ol id="mealsList"></ol>
+              <div class="plan-area__left-column__row">
+                <h2 class="plan-area__list-title">Meals:</h2>
+                <ol id="mealsList" class="plan-area__list"></ol>
               </div>
 
               <!--Grateful input-->
-              <div id="fourth_row_left" class="list">
-                <h2>I am grateful for:</h2>
-                <div id="gratefulElement" class="text-input"></div>
+              <div class="plan-area__left-column__row">
+                <h2 class="plan-area__list-title">I am grateful for:</h2>
+                <div id="gratefulElement" class="plan-area__text-input"></div>
               </div>
             </div>
 
-            <div id="rigth_column" class="col-md-8">
+            <div class="col-md-8 plan-area__right-column">
               <!--To do input-->
-              <div id="first_row_right" class="list">
-                <h2>To do:</h2>
-                <ol id="toDoList"></ol>
+              <div class="plan-area__right-column__row">
+                <h2 class="plan-area__list-title">To do:</h2>
+                <ol id="toDoList" class="plan-area__list"></ol>
               </div>
 
               <!--Appointments input-->
-              <div id="second_row_right" class="list">
-                <h2>Appointments:</h2>
-                <ol id="appointmentsList"></ol>
+              <div class="plan-area__right-column__row">
+                <h2 class="plan-area__list-title">Appointments:</h2>
+                <ol id="appointmentsList" class="plan-area__list"></ol>
               </div>
             </div>
           </div>
-          <span id="footer" class="row g-0" class="list">
-            <h2>Notes:</h2>
-            <div id="notesElement" class="text-input"></div>
+          <span class="row g-0 plan-area__footer">
+            <h2 class="plan-area__list-title">Notes:</h2>
+            <div id="notesElement" class="plan-area__text-input"></div>
           </span>
         </div>
       </div>

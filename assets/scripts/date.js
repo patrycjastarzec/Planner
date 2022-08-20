@@ -1,15 +1,16 @@
-let dateInput = document.getElementById("dateInput");
+let dateInput = document.querySelector(".plan-area__date");
 
 let today = new Date();
-const dd = String(today.getDate()).padStart(2, '0');
-const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+const dd = String(today.getDate()).padStart(2, "0");
+const mm = String(today.getMonth() + 1).padStart(2, "0");
 const yyyy = today.getFullYear();
 
-today = dd + '.' + mm + '.' + yyyy;
+today = dd + "." + mm + "." + yyyy;
 //console.log(today)
 
-function addDate(){
+function addDate() {
   dateInput.innerHTML = today;
 }
 
 window.addEventListener("load", addDate);
+

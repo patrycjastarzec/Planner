@@ -1,100 +1,16 @@
+.row {
+  background: rgb(234, 224, 255);
+}
+
 .form-area__intro__title,
-.plan-page__intro__title {
+.plan-area__intro__title {
   font-family: "Overpass", sans-serif;
   font-size: 2.5em;
   text-align: center;
 }
 
-h2 {
-  font-family: "Overpass", sans-serif;
-  font-size: 1.6em;
-  text-align: center;
-  margin: 0px;
-}
-
-ol {
-  font-family: "Overpass", sans-serif;
-  font-size: 0.8em;
-}
-
-/* bootstrap class */
-.row {
-  background: rgb(234, 224, 255);
-}
-/*------------------*/
-
-.text-input {
-  font-family: "Overpass", sans-serif;
-  font-size: 0.8em;
-  padding: 5px;
-}
-
-.list {
-  padding: 5px;
-}
-
-label {
-  font-family: "Overpass", sans-serif;
-  padding-top: 15px;
-  font-weight: 700;
-}
-
-input[type="text"] {
-  font-family: "Overpass", sans-serif;
-  color: gray;
-  font-size: 0.8em;
-  font-style: italic;
-}
-
-input {
-  width: 300px;
-  height: 40px;
-  border: 0;
-  padding-left: 10px;
-}
-
-textarea {
-  border: 0;
-  padding-left: 10px;
-  padding-top: 10px;
-  resize: none;
-}
-
-textarea[type="text"] {
-  font-family: "Overpass", sans-serif;
-  color: gray;
-  font-size: 0.8em;
-  font-style: italic;
-}
-
-#notes {
-  width: 300px;
-  height: 100px;
-}
-
-.notesSpan {
-  display: inline-block;
-  width: 100%;
-}
-
-/* #addNotesButton,
-#removeNotesButton {
-  vertical-align: top;
-} */
-
-#dateInput {
-  text-align: center;
-  font-family: "Overpass", sans-serif;
-  font-size: 1.2em;
-  margin: 0;
-}
-
-#quote {
-  text-align: center;
-  font-family: "Overpass", sans-serif;
-  font-size: 1.25em;
-  color: rgb(80, 80, 80);
-  margin-top: 5px;
+.form-area__row {
+  display: flex;
 }
 
 .form-area__intro__description {
@@ -103,56 +19,40 @@ textarea[type="text"] {
   padding-right: 10px;
 }
 
-.form-area {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.form-area__label {
+  font-family: "Overpass", sans-serif;
+  padding-top: 15px;
+  font-weight: 700;
 }
 
-#pageWithPlan {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.form-area__input-area[type="text"] {
+  font-family: "Overpass", sans-serif;
+  color: gray;
+  font-size: 0.8em;
+  font-style: italic;
 }
 
-#header {
-  height: 150px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
-  padding: 10px;
+.form-area__input-area {
+  width: 300px;
+  height: 40px;
+  border: 0;
+  padding-left: 10px;
 }
 
-#first_row_left,
-#second_row_left,
-#third_row_left,
-#fourth_row_left {
-  height: 150px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
+.form-area__text-area {
+  border: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  resize: none;
+  width: 300px;
+  height: 100px;
 }
 
-#first_row_right,
-#second_row_right {
-  height: 300px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
-}
-
-#footer {
-  height: 200px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
-  padding: 5px;
-}
-
-.container {
-  position: relative;
-}
-
-.form-area__row {
-  display: flex;
+.form-area__text-area[type="text"] {
+  font-family: "Overpass", sans-serif;
+  color: gray;
+  font-size: 0.8em;
+  font-style: italic;
 }
 
 .form-area__buttons {
@@ -160,6 +60,77 @@ textarea[type="text"] {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.plan-area,
+.form-area {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.plan-area__date {
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.plan-area__quote {
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.25em;
+  color: rgb(80, 80, 80);
+  margin-top: 5px;
+}
+
+.plan-area__list-title {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 0px;
+}
+
+.plan-area__list {
+  font-family: "Overpass", sans-serif;
+  font-size: 0.8em;
+}
+
+.plan-area__text-input {
+  font-family: "Overpass", sans-serif;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+.plan-area__header {
+  height: 150px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: black;
+  padding: 10px;
+}
+
+.plan-area__left-column__row {
+  padding: 5px;
+  height: 150px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: black;
+}
+
+.plan-area__right-column__row {
+  padding: 5px;
+  height: 300px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: black;
+}
+
+.plan-area__footer {
+  height: 200px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: black;
+  padding: 5px;
 }
 
 /*-------------BUTTONS-----------------*/

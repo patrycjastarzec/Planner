@@ -211,37 +211,37 @@
 
   /*----------------------------------------------------------------------------------------------------------*/
 
-  h1 {
+  .plan-area__intro__title {
     font-family: "Overpass", sans-serif;
     font-size: 2.5em;
     text-align: center;
   }
 
-  h2 {
+  .plan-area__list-title {
     font-family: "Overpass", sans-serif;
     font-size: 1.6em;
     text-align: center;
     margin: 0px;
   }
 
-  ol {
+  .plan-area__list {
     font-family: "Overpass", sans-serif;
     font-size: 0.8em;
   }
 
-  .text-input {
+  .plan-area__text-input {
     font-family: "Overpass", sans-serif;
     font-size: 0.8em;
   }
 
-  #dateInput {
+  .plan-area__date {
     text-align: center;
     font-family: "Overpass", sans-serif;
     font-size: 1.2em;
     margin: 0;
   }
 
-  #quote {
+  .plan-area__quote {
     text-align: center;
     font-family: "Overpass", sans-serif;
     font-size: 1.25em;
@@ -249,44 +249,40 @@
     margin-top: 5px;
   }
 
-  .list {
-    padding: 5px;
-  }
-
-  #pageWithPlan {
+  .plan-area {
     background-color: rgb(191, 214, 214);
     width: 1600px;
   }
 
-  #header {
+  .plan-area__header {
     height: 150px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
   }
 
-  #first_row_left,
-  #second_row_left,
-  #third_row_left,
-  #fourth_row_left {
+  .plan-area__left-column__row {
+    padding: 5px;
     height: 150px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
   }
 
-  #first_row_right,
-  #second_row_right {
+  .plan-area__right-column__row {
+    padding: 5px;
     height: 300px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
   }
 
-  #footer {
+  .plan-area__footer {
+    padding: 5px;
     height: 200px;
     outline-style: solid;
     outline-width: 1px;
     outline-color: black;
   }
 }
+
