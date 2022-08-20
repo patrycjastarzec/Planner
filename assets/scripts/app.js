@@ -92,7 +92,6 @@ function removeListElement(listArea, myList) {
   if (myList.length > 0) {
     listArea.removeChild(listArea.lastElementChild);
     myList.pop();
-    console.log(myList.length); // to check the length of list in browser developer tools
   }
 }
 
@@ -116,8 +115,6 @@ removeAppointmentButton.addEventListener(
 //-----------------Printing-----------------
 
 function printView() {
-  const pageWithPlan = document.getElementById("pageWithPlan");
-  const formArea = document.querySelector(".form-area");
   formArea.style.display = "none";
   window.print();
 }

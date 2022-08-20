@@ -1,3 +1,5 @@
+const formArea = document.querySelector(".form-area");
+
 const goalInput = document.getElementById("form-area__input-goal");
 const mealInput = document.getElementById("form-area__input-todaymeal");
 const toDoInput = document.getElementById("form-area__input-todo");
