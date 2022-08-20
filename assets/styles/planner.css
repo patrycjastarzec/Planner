@@ -135,21 +135,23 @@
 
 /*-------------BUTTONS-----------------*/
 
-.addButton,
-.removeButton {
+.form-area__add-button,
+.form-area__remove-button {
   background-color: rgb(72, 145, 145);
   border-width: 0;
   height: 40px;
   width: 40px;
   box-shadow: 2.5px 2.5px 5px grey;
   border-radius: 50%;
+  font-size: 1.5em;
+  color: white;
 }
 
-.addButton {
+.form-area__add-button {
   margin-right: 6px;
 }
 
-.removeButton {
+.form-area__remove-button {
   margin-left: 6px;
 }
 
@@ -161,12 +163,6 @@ button:hover {
 #clearPlan {
   height: 25px;
   width: 40px;
-}
-
-.addButton,
-.removeButton {
-  font-size: 1.5em;
-  color: white;
 }
 
 #printPlan,
