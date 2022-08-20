@@ -17,13 +17,15 @@ const addNotesButton = document.getElementById("addNotesButton");
 const removeGoalButton = document.getElementById("removeGoalButton");
 const removeMealButton = document.getElementById("removeMealButton");
 const removeToDoButton = document.getElementById("removeToDoButton");
-const removeAppointmentButton = document.getElementById("removeAppointmentButton");
+const removeAppointmentButton = document.getElementById(
+  "removeAppointmentButton"
+);
 const removePriorButton = document.getElementById("removePriorButton");
 const removeGratefulButton = document.getElementById("removeGratefulButton");
 const removeNotesButton = document.getElementById("removeNotesButton");
 
-const printButton = document.getElementById("printPlan");
-const clearButton = document.getElementById("clearPlan");
+const printButton = document.getElementById("form-area__print-button");
+const clearButton = document.getElementById("form-area__clear-button");
 
 let goalListArea = document.getElementById("goalsList");
 let mealListArea = document.getElementById("mealsList");

@@ -155,20 +155,26 @@
   margin-left: 6px;
 }
 
-button:hover {
-  background-color: rgb(30, 58, 58);
-}
-
-#printPlan,
-#clearPlan {
-  height: 25px;
-  width: 40px;
-}
-
-#printPlan,
-#clearPlan {
+#form-area__print-button,
+#form-area__clear-button {
+  height: 45px;
+  width: 80px;
+  margin: 10px;
   font-size: 1em;
-  color: white;
+  text-transform: uppercase;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}
+
+#form-area__print-button:hover,
+#form-area__clear-button:hover {
+  background-color: rgba(199, 191, 216);
+  border-style: solid;
+  border-color: rgb(92, 84, 109);
+  border-width: 1px;
 }
 
 /*-------------------------------------*/
