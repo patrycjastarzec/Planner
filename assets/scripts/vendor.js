@@ -47,12 +47,14 @@ const removeNotesButton = document.getElementById(
 const printButton = document.getElementById("form-area__print-button");
 const clearButton = document.getElementById("form-area__clear-button");
 
-let goalListArea = document.getElementById("goalsList");
-let mealListArea = document.getElementById("mealsList");
-let tasksListArea = document.getElementById("toDoList");
-let appointmentsListArea = document.getElementById("appointmentsList");
+let goalListArea = document.getElementById("plan-area__list-goals");
+let mealListArea = document.getElementById("plan-area__list-meals");
+let tasksListArea = document.getElementById("plan-area__list-todo");
+let appointmentsListArea = document.getElementById(
+  "plan-area__list-appointments"
+);
 
-let priorityElement = document.getElementById("priorityElement");
-let gratefulElement = document.getElementById("gratefulElement");
-let notesElement = document.getElementById("notesElement");
+let priorityElement = document.getElementById("plan-area__element-priority");
+let gratefulElement = document.getElementById("plan-area__element-grateful");
+let notesElement = document.getElementById("plan-area__element-notes");
 
