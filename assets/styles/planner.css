@@ -1,4 +1,4 @@
-.form-page__intro__title,
+.form-area__intro__title,
 .plan-page__intro__title {
   font-family: "Overpass", sans-serif;
   font-size: 2.5em;
@@ -77,10 +77,10 @@ textarea[type="text"] {
   width: 100%;
 }
 
-#addNotesButton,
+/* #addNotesButton,
 #removeNotesButton {
   vertical-align: top;
-}
+} */
 
 #dateInput {
   text-align: center;
@@ -97,13 +97,13 @@ textarea[type="text"] {
   margin-top: 5px;
 }
 
-.form-page__intro__description {
+.form-area__intro__description {
   font-family: "Overpass", sans-serif;
   text-align: justify;
   padding-right: 10px;
 }
 
-#form-area {
+.form-area {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -151,11 +151,11 @@ textarea[type="text"] {
   position: relative;
 }
 
-.form-page__row {
+.form-area__row {
   display: flex;
 }
 
-.form-page__buttons {
+.form-area__buttons {
   flex-grow: 1;
   display: flex;
   justify-content: center;

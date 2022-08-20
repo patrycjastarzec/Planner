@@ -117,7 +117,7 @@ removeAppointmentButton.addEventListener(
 
 function printView() {
   const pageWithPlan = document.getElementById("pageWithPlan");
-  const formArea = document.getElementById("form-area");
+  const formArea = document.querySelector(".form-area");
   formArea.style.display = "none";
   window.print();
 }
