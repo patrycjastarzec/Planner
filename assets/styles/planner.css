@@ -35,17 +35,23 @@
 .form-area__input-area {
   width: 300px;
   height: 40px;
-  border: 0;
   padding-left: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(92, 84, 109);
+  border-width: 1px;
 }
 
 .form-area__text-area {
-  border: 0;
   padding-left: 10px;
   padding-top: 10px;
   resize: none;
   width: 300px;
   height: 100px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(92, 84, 109);
+  border-width: 1px;
 }
 
 .form-area__text-area[type="text"] {
