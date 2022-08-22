@@ -1,5 +1,15 @@
-.row {
+body {
   background: rgb(234, 224, 255);
+}
+
+.container {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.56) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25);
 }
 
 .form-area__intro__title,
@@ -74,6 +84,12 @@
   padding-bottom: 20px;
 }
 
+.plan-area__header,
+.plan-area__body,
+.plan-area__footer {
+  background-color: rgb(255, 255, 255);
+}
+
 .plan-area__date {
   text-align: center;
   font-family: "Overpass", sans-serif;
@@ -109,33 +125,30 @@
 
 .plan-area__header {
   height: 150px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
+  border: 1px solid rgb(92, 84, 109);
   padding: 10px;
 }
 
 .plan-area__left-column__row {
   padding: 5px;
   height: 150px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
+  border-left: 1px solid rgb(92, 84, 109);
+  border-right: 1px solid rgb(92, 84, 109);
+  border-bottom: 1px solid rgb(92, 84, 109);
 }
 
 .plan-area__right-column__row {
   padding: 5px;
   height: 300px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
+  border-right: 1px solid rgb(92, 84, 109);
+  border-bottom: 1px solid rgb(92, 84, 109);
 }
 
 .plan-area__footer {
   height: 200px;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: black;
+  border-left: 1px solid rgb(92, 84, 109);
+  border-right: 1px solid rgb(92, 84, 109);
+  border-bottom: 1px solid rgb(92, 84, 109);
   padding: 5px;
 }
 
