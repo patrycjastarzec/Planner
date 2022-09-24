@@ -90,6 +90,11 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+.plan-area__intro__title {
+  padding-top: 5px;
+  font-family: "Satisfy", cursive;
+}
+
 .plan-area__date {
   text-align: center;
   font-family: "Overpass", sans-serif;
@@ -100,13 +105,13 @@ body {
 .plan-area__quote {
   text-align: center;
   font-family: "Overpass", sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
   color: rgb(80, 80, 80);
   margin-top: 5px;
 }
 
 .plan-area__list-title {
-  font-family: "Overpass", sans-serif;
+  font-family: "Satisfy", cursive;
   font-size: 1.6em;
   text-align: center;
   margin: 0px;
@@ -114,13 +119,14 @@ body {
 
 .plan-area__list {
   font-family: "Overpass", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .plan-area__text-input {
   font-family: "Overpass", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 5px;
+  text-align: center;
 }
 
 .plan-area__header {

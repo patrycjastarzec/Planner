@@ -212,26 +212,27 @@
   /*----------------------------------------------------------------------------------------------------------*/
 
   .plan-area__intro__title {
-    font-family: "Overpass", sans-serif;
+    margin-top: 10px;
+    font-family: "Satisfy", cursive;
     font-size: 2.5em;
     text-align: center;
   }
 
   .plan-area__list-title {
-    font-family: "Overpass", sans-serif;
+    margin: 0px;
+    font-family: "Satisfy", cursive;
     font-size: 1.6em;
     text-align: center;
-    margin: 0px;
   }
 
   .plan-area__list {
     font-family: "Overpass", sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   .plan-area__text-input {
     font-family: "Overpass", sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   .plan-area__date {
@@ -244,7 +245,7 @@
   .plan-area__quote {
     text-align: center;
     font-family: "Overpass", sans-serif;
-    font-size: 1.25em;
+    font-size: 1em;
     color: rgb(80, 80, 80);
     margin-top: 5px;
   }
