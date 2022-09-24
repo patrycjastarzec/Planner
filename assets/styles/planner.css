@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: rgb(234, 224, 255);
 }
@@ -11,6 +17,121 @@ body {
   border: 1px solid #ffffff;
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.25);
 }
+
+/*-------------NAVIGATION-----------------*/
+
+.navigation__row {
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  background: rgb(234, 224, 255);
+}
+
+.navigation__panel {
+  height: 2.75em;
+  margin: 0px;
+  padding: 0px;
+  width: 1300px;
+}
+
+.navigation__list {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0px;
+}
+
+.navigation__item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.navigation__button {
+  display: none;
+}
+
+.navigation__link {
+  margin: auto;
+  color: rgb(0, 0, 0);
+  font-size: 0.95vw;
+}
+
+li:nth-child(2):hover,
+li:nth-child(3):hover,
+li:nth-child(4):hover {
+  border-bottom: 1px solid rgb(199, 191, 216);
+}
+
+.navigation__link:link,
+.navigation__link:visited,
+.navigation__link:hover,
+.navigation__link:active {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navigation__icon > .navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__square {
+  width: 20px;
+  height: 20px;
+  rotate: 45deg;
+  top: 3.5px;
+  border-radius: 3px;
+}
+
+.icon__square:nth-child(1) {
+  background-color: rgb(199, 191, 216);
+}
+
+.icon__square:nth-child(2) {
+  background-color: rgb(92, 84, 109);
+}
+
+#navigation__login,
+#navigation__signup {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgb(208, 208, 208);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
+
+#navigation__login {
+  background: rgb(134, 122, 158);
+  margin-left: 50px;
+}
+
+#navigation__login:hover {
+  background: rgb(92, 84, 109);
+}
+
+#navigation__signup {
+  background: rgb(219, 209, 239);
+  margin-left: 15px;
+}
+
+#navigation__signup:hover {
+  background: rgba(199, 191, 216);
+}
+
+/*-------------FORM AREA-----------------*/
 
 .form-area__intro__title,
 .plan-area__intro__title {
@@ -83,6 +204,8 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+/*-------------PLAN AREA-----------------*/
 
 .plan-area__header,
 .plan-area__body,

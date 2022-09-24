@@ -40,6 +40,56 @@
   </head>
 
   <body>
+    <div class="row navigation__row">
+      <nav class="navigation__panel">
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__icon">
+            <a class="navigation__link" href="#">
+              <div class="icon__square"></div>
+              <div class="icon__square"></div>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="subpages/planner.html"
+              >create a plan</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">tips & tricks</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">about</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" id="navigation__login" href="#"
+              >log in</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" id="navigation__signup" href="#"
+              >sign up</a
+            >
+          </li>
+        </ul>
+        <button class="navigation__button">
+          <span class="navigation__button__box">
+            <span class="navigation__button__inner"></span>
+          </span>
+        </button>
+
+        <script>
+          const navigation__button = document.querySelector(
+            ".navigation__button"
+          );
+          const navigation__list = document.querySelector(".navigation__list");
+
+          navigation__button.addEventListener("click", () => {
+            navigation__list.classList.toggle("navigation__responsive");
+            navigation__button.classList.toggle("navigation__button--active");
+          });
+        </script>
+      </nav>
+    </div>
     <div class="container">
       <div class="row">
         <!--Form Area-->
