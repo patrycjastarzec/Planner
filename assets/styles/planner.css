@@ -17,18 +17,19 @@ body {
   align-items: center;
   margin: 0px;
   padding: 0px;
-  background: rgb(234, 224, 255);
+  background: rgb(255, 255, 255);
 }
 
 .navigation__panel {
   height: 2.75em;
   margin: 0px;
   padding: 0px;
-  width: 85%;
+  width: 100%;
 }
 
 .navigation__list {
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -91,7 +92,7 @@ li:nth-child(4):hover {
 #navigation__login,
 #navigation__signup {
   height: 100%;
-  width: 100%;
+  width: 13em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +106,6 @@ li:nth-child(4):hover {
 
 #navigation__login {
   background: rgb(134, 122, 158);
-  margin-left: 50px;
 }
 
 #navigation__login:hover {
@@ -323,4 +323,161 @@ li:nth-child(4):hover {
   background-color: rgba(199, 191, 216);
 }
 
-/*-------------------------------------*/
+/*-------------MOBILE VIEW-----------------*/
+
+@media screen and (max-width: 600px) {
+  .container {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .main {
+    position: r;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px 50px 10px 50px;
+  }
+
+  .main__title {
+    justify-content: center;
+    height: 25%;
+  }
+
+  .main__left,
+  .main__right {
+    width: 100%;
+    height: 50%;
+    align-items: center;
+  }
+
+  .main__left {
+    justify-content: flex-end;
+    padding: 0;
+    margin: 10px 0px 20px 0px;
+  }
+
+  .main__paragraphs {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__description {
+    text-align: center;
+    margin: 0;
+  }
+
+  #button__link {
+    width: 50%;
+  }
+
+  .main__button {
+    width: 100%;
+  }
+
+  .navigation__list {
+    position: relative;
+    display: inline-block;
+    background-color: #ffffff;
+    height: auto;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .navigation__button {
+    position: absolute;
+    top: 3vh;
+    right: 10vw;
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+
+    display: inline-block;
+
+    border: 0;
+    background-color: transparent;
+  }
+
+  ul.navigation__responsive li {
+    display: block;
+    background-color: #ffffff;
+  }
+
+  ul.navigation__responsive li:not(.navigation__icon) {
+    margin: 25px 0px 25px 0px;
+  }
+
+  li:nth-child(2),
+  li:nth-child(3),
+  li:nth-child(4),
+  li:nth-child(5),
+  li:nth-child(6) {
+    display: none;
+  }
+
+  .navigation__icon {
+    width: 60px;
+    height: 50px;
+    display: block;
+  }
+
+  .navigation__icon > .navigation__link {
+    height: 100%;
+  }
+
+  .navigation__link {
+    font-size: 2vh;
+  }
+
+  #navigation__login,
+  #navigation__signup {
+    background-color: inherit;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .navigation__button__inner,
+  .navigation__button__inner::before,
+  .navigation__button__inner::after {
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .navigation__button__inner {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navigation__button__inner::before,
+  .navigation__button__inner::after {
+    content: "";
+  }
+
+  .navigation__button__inner::before {
+    top: -10px;
+  }
+
+  .navigation__button__inner::after {
+    top: 10px;
+  }
+
+  .navigation__button--active .navigation__button__inner {
+    background-color: transparent;
+  }
+
+  .navigation__button--active .navigation__button__inner::before {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .navigation__button--active .navigation__button__inner::after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
