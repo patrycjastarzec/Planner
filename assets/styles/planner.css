@@ -435,6 +435,7 @@ li:nth-child(4):hover {
 
   #navigation__login,
   #navigation__signup {
+    width: 100%;
     background-color: inherit;
     color: rgb(0, 0, 0);
     margin: 0;
