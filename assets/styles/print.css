@@ -211,6 +211,10 @@
 
   /*----------------------------------------------------------------------------------------------------------*/
 
+  .navigation__row {
+    display: none;
+  }
+
   .plan-area__intro__title {
     margin-top: 10px;
     font-family: "Satisfy", cursive;
