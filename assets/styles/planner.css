@@ -65,12 +65,17 @@ li:nth-child(4):hover {
 .navigation__link:active {
   text-decoration: none;
   text-transform: uppercase;
+  color: rgb(0, 0, 0);
 }
 
 .navigation__icon > .navigation__link {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navigation__icon {
+  margin-left: 50px;
 }
 
 .icon__square {
@@ -106,6 +111,7 @@ li:nth-child(4):hover {
 
 #navigation__login {
   background: rgb(134, 122, 158);
+  margin-left: 10px;
 }
 
 #navigation__login:hover {
@@ -114,7 +120,7 @@ li:nth-child(4):hover {
 
 #navigation__signup {
   background: rgb(219, 209, 239);
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 #navigation__signup:hover {
