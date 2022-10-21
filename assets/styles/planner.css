@@ -336,7 +336,7 @@ li:nth-child(4):hover {
 
 /*-------------MOBILE VIEW-----------------*/
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 767px) {
   .form-area {
     padding-left: 20px;
     padding-right: 20px;
@@ -345,6 +345,11 @@ li:nth-child(4):hover {
   .form-area__buttons,
   .form-area__input {
     margin-top: 5px;
+  }
+
+  .form-area__input-area,
+  .form-area__text-area {
+    width: 100%;
   }
 
   .plan-area__right-column__row {
@@ -507,5 +512,20 @@ li:nth-child(4):hover {
 
   .navigation__button--active .navigation__button__inner::after {
     transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form-area__row.row {
+    margin-top: 10px;
+  }
+
+  .form-area__input-area,
+  .form-area__text-area {
+    width: 100%;
+  }
+
+  .plan-area {
+    width: 100%;
   }
 }
