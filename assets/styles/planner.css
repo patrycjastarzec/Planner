@@ -336,27 +336,6 @@ li:nth-child(4):hover {
 
 /*-------------MOBILE VIEW-----------------*/
 
-@media screen and (max-width: 767px) {
-  .form-area {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .form-area__buttons,
-  .form-area__input {
-    margin-top: 5px;
-  }
-
-  .form-area__input-area,
-  .form-area__text-area {
-    width: 100%;
-  }
-
-  .plan-area__right-column__row {
-    border-left: 1px solid rgb(92, 84, 109);
-  }
-}
-
 @media screen and (max-width: 600px) {
   .container {
     border-radius: 0;
@@ -515,6 +494,27 @@ li:nth-child(4):hover {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .form-area {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .form-area__buttons,
+  .form-area__input {
+    margin-top: 5px;
+  }
+
+  .form-area__input-area,
+  .form-area__text-area {
+    width: 100%;
+  }
+
+  .plan-area__right-column__row {
+    border-left: 1px solid rgb(92, 84, 109);
+  }
+}
+
 @media screen and (max-width: 992px) {
   .form-area__row.row {
     margin-top: 10px;
@@ -525,7 +525,12 @@ li:nth-child(4):hover {
     width: 100%;
   }
 
-  .plan-area {
-    width: 100%;
+  .form-area__input {
+    margin: 0px;
+  }
+
+  .content_row {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
