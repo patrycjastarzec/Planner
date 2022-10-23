@@ -422,11 +422,11 @@ li:nth-child(4):hover {
     margin: 25px 0px 25px 0px;
   }
 
-  li:nth-child(2),
-  li:nth-child(3),
-  li:nth-child(4),
-  li:nth-child(5),
-  li:nth-child(6) {
+  li:nth-child(2):not(.plan-area__list__li),
+  li:nth-child(3):not(.plan-area__list__li),
+  li:nth-child(4):not(.plan-area__list__li),
+  li:nth-child(5):not(.plan-area__list__li),
+  li:nth-child(6):not(.plan-area__list__li) {
     display: none;
   }
 

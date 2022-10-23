@@ -11,6 +11,7 @@ function addListElement(input, list, listArea, limit) {
     let newElement = document.createElement("li");
     newElement.innerHTML = userInput;
     listArea.appendChild(newElement);
+    newElement.classList.add("plan-area__list__li");
   }
   clearTextArea(input);
 }
