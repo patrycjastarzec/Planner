@@ -544,7 +544,7 @@ body {
 }
 
 @media screen and (max-width: 1400px) and (min-width: 992px) {
-  .div_of_input {
+  .form-area__input__col {
     width: 100%;
   }
 
