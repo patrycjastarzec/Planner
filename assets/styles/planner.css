@@ -54,9 +54,7 @@ body {
   font-size: 2vh;
 }
 
-li:nth-child(2):hover,
-li:nth-child(3):hover,
-li:nth-child(4):hover {
+.navigation__link.text:hover {
   border-bottom: 1px solid rgb(199, 191, 216);
 }
 
@@ -401,14 +399,11 @@ li:nth-child(4):hover {
 
   .navigation__button {
     position: absolute;
-    top: 3vh;
     right: 10vw;
     margin: 10px;
     height: 30px;
     width: 30px;
-
     display: inline-block;
-
     border: 0;
     background-color: transparent;
   }
@@ -422,11 +417,7 @@ li:nth-child(4):hover {
     margin: 25px 0px 25px 0px;
   }
 
-  li:nth-child(2):not(.plan-area__list__li),
-  li:nth-child(3):not(.plan-area__list__li),
-  li:nth-child(4):not(.plan-area__list__li),
-  li:nth-child(5):not(.plan-area__list__li),
-  li:nth-child(6):not(.plan-area__list__li) {
+  .navigation__item {
     display: none;
   }
 
@@ -493,6 +484,21 @@ li:nth-child(4):hover {
     transform: translateY(-10px) rotate(-45deg);
   }
 
+  .navigation__link.text:hover {
+    border-bottom: none;
+    font-weight: bold;
+  }
+
+  #navigation__login:hover {
+    background: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+
+  #navigation__signup:hover {
+    background: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+
   .form-area {
     padding-left: 5px;
     padding-right: 5px;
@@ -534,5 +540,16 @@ li:nth-child(4):hover {
   .content_row {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 992px) {
+  .div_of_input {
+    width: 100%;
+  }
+
+  .form-area__input-area,
+  .form-area__input {
+    width: 100%;
   }
 }
