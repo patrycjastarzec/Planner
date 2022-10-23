@@ -511,6 +511,10 @@ li:nth-child(4):hover {
   .plan-area__right-column__row {
     border-left: 1px solid rgb(92, 84, 109);
   }
+
+  .plan-area__quote {
+    font-size: 0.75em;
+  }
 }
 
 @media screen and (max-width: 992px) {
