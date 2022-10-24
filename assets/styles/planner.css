@@ -146,7 +146,7 @@ body {
 .form-area__intro__description {
   font-family: "Overpass", sans-serif;
   text-align: justify;
-  padding-right: 10px;
+  padding-right: 25px;
 }
 
 .form-area__label {
@@ -526,6 +526,10 @@ body {
 @media screen and (max-width: 992px) {
   .form-area__row.row {
     margin-top: 10px;
+  }
+
+  .form-area__intro__description {
+    padding-right: 0px;
   }
 
   .form-area__input-area,
