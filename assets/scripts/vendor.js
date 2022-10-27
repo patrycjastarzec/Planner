@@ -60,3 +60,8 @@ let priorityElement = document.getElementById("plan-area__element-priority");
 let gratefulElement = document.getElementById("plan-area__element-grateful");
 let notesElement = document.getElementById("plan-area__element-notes");
 
+let myGoalList = [];
+let myMealList = [];
+let myToDoList = [];
+let myAppointmentsList = [];
+

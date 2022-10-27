@@ -1,23 +1,36 @@
+//-----------------Check localstorage-----------------
+
+function checkListInStorage(listArea) {
+  const storedListElement = JSON.parse(localStorage.getItem(listArea.id));
+  if (storedListElement) {
+    storedListElement.forEach((x) => {
+      let newElement = document.createElement("li");
+      newElement.innerHTML = x;
+      listArea.appendChild(newElement);
+    });
+  }
+}
+checkListInStorage(goalListArea);
+checkListInStorage(mealListArea);
+checkListInStorage(tasksListArea);
+
 //-----------------List input-----------------
-let myGoalList = [];
-let myMealList = [];
-let myToDoList = [];
-let myAppointmentsList = [];
 
 function addListElement(input, list, listArea, limit) {
   let userInput = input.value;
+  const storedListElement = JSON.parse(localStorage.getItem(listArea.id));
+  if (storedListElement) {
+    list = storedListElement;
+  }
   if (userInput.length > 0 && list.length < limit) {
     list.push(userInput);
     let newElement = document.createElement("li");
     newElement.innerHTML = userInput;
     listArea.appendChild(newElement);
     newElement.classList.add("plan-area__list__li");
+    localStorage.setItem(listArea.id, JSON.stringify(list));
   }
-  clearTextArea(input);
-}
-
-function clearTextArea(areaToClear) {
-  areaToClear.value = "";
+  input.value = "";
 }
 
 addGoalButton.addEventListener(
@@ -132,6 +145,7 @@ function clearPlan() {
   priorityElement.innerHTML = "";
   gratefulElement.innerHTML = "";
   notesElement.innerHTML = "";
+  localStorage.clear();
 }
 
 clearButton.addEventListener("click", clearPlan);
