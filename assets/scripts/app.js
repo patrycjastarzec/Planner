@@ -1,7 +1,7 @@
-//-----------------Check localstorage-----------------
+//-----------------Check localstorage for list input-----------------
 
 function checkListInStorage(listArea) {
-  const storedListElement = JSON.parse(localStorage.getItem(listArea.id));
+  let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
   if (storedListElement) {
     storedListElement.forEach((x) => {
       let newElement = document.createElement("li");
@@ -13,12 +13,27 @@ function checkListInStorage(listArea) {
 checkListInStorage(goalListArea);
 checkListInStorage(mealListArea);
 checkListInStorage(tasksListArea);
+checkListInStorage(appointmentsListArea);
+
+//-----------------Check localstorage for text input-----------------
+
+function checkTextInStorage(myElement) {
+  let storedTextElement = localStorage.getItem(myElement.id);
+  if (storedTextElement) {
+    let newElement = document.createElement("p");
+    newElement.innerHTML = storedTextElement;
+    myElement.appendChild(newElement);
+  }
+}
+checkTextInStorage(priorityElement);
+checkTextInStorage(gratefulElement);
+checkTextInStorage(notesElement);
 
 //-----------------List input-----------------
 
 function addListElement(input, list, listArea, limit) {
   let userInput = input.value;
-  const storedListElement = JSON.parse(localStorage.getItem(listArea.id));
+  let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
   if (storedListElement) {
     list = storedListElement;
   }
@@ -59,13 +74,18 @@ addAppointmentButton.addEventListener(
 //-----------------Text input-----------------
 
 function addTextElement(input, myElement) {
+  let storedTextElement = localStorage.getItem(`${myElement.id}`);
+  if (storedTextElement) {
+    localStorage.removeItem(`${myElement.id}`);
+  }
   let userInput = input.value;
   let newElement = document.createElement("p");
   newElement.innerHTML = userInput;
   if (myElement.children.length < 1) {
     myElement.appendChild(newElement);
   }
-  clearTextArea(input);
+  input.value = "";
+  localStorage.setItem(`${myElement.id}`, userInput);
 }
 
 addPriorButton.addEventListener(
