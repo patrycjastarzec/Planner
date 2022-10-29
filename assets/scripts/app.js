@@ -74,6 +74,7 @@ addNotesButton.addEventListener(
 
 function removeTextElement(myElement) {
   myElement.innerHTML = "";
+  localStorage.removeItem(`${myElement.id}`);
 }
 
 removePriorButton.addEventListener(
