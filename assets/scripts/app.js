@@ -1,34 +1,3 @@
-//-----------------Check localstorage for list input-----------------
-
-function checkListInStorage(listArea) {
-  let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
-  if (storedListElement) {
-    storedListElement.forEach((x) => {
-      let newElement = document.createElement("li");
-      newElement.innerHTML = x;
-      listArea.appendChild(newElement);
-    });
-  }
-}
-checkListInStorage(goalListArea);
-checkListInStorage(mealListArea);
-checkListInStorage(tasksListArea);
-checkListInStorage(appointmentsListArea);
-
-//-----------------Check localstorage for text input-----------------
-
-function checkTextInStorage(myElement) {
-  let storedTextElement = localStorage.getItem(myElement.id);
-  if (storedTextElement) {
-    let newElement = document.createElement("p");
-    newElement.innerHTML = storedTextElement;
-    myElement.appendChild(newElement);
-  }
-}
-checkTextInStorage(priorityElement);
-checkTextInStorage(gratefulElement);
-checkTextInStorage(notesElement);
-
 //-----------------List input-----------------
 
 function addListElement(input, list, listArea, limit) {
@@ -105,6 +74,7 @@ addNotesButton.addEventListener(
 
 function removeTextElement(myElement) {
   myElement.innerHTML = "";
+  localStorage.removeItem(`${myElement.id}`);
 }
 
 removePriorButton.addEventListener(
@@ -122,10 +92,14 @@ removeNotesButton.addEventListener(
 
 //-----------------Remove list input------------
 
-function removeListElement(listArea, myList) {
-  if (myList.length > 0) {
+function removeListElement(listArea, list) {
+  let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
+  if (storedListElement.length > 0) {
+    list = storedListElement;
+    localStorage.removeItem(listArea.id);
     listArea.removeChild(listArea.lastElementChild);
-    myList.pop();
+    storedListElement.pop();
+    localStorage.setItem(listArea.id, JSON.stringify(storedListElement));
   }
 }
 
@@ -145,6 +119,37 @@ removeAppointmentButton.addEventListener(
   "click",
   removeListElement.bind(this, appointmentsListArea, myAppointmentsList)
 );
+
+//-----------------Check localstorage for list input-----------------
+
+function checkListInStorage(listArea) {
+  let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
+  if (storedListElement) {
+    storedListElement.forEach((x) => {
+      let newElement = document.createElement("li");
+      newElement.innerHTML = x;
+      listArea.appendChild(newElement);
+    });
+  }
+}
+checkListInStorage(goalListArea);
+checkListInStorage(mealListArea);
+checkListInStorage(tasksListArea);
+checkListInStorage(appointmentsListArea);
+
+//-----------------Check localstorage for text input-----------------
+
+function checkTextInStorage(myElement) {
+  let storedTextElement = localStorage.getItem(myElement.id);
+  if (storedTextElement) {
+    let newElement = document.createElement("p");
+    newElement.innerHTML = storedTextElement;
+    myElement.appendChild(newElement);
+  }
+}
+checkTextInStorage(priorityElement);
+checkTextInStorage(gratefulElement);
+checkTextInStorage(notesElement);
 
 //-----------------Printing-----------------
 
