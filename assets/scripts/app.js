@@ -8,13 +8,11 @@ function addListElement(input, list, listArea, limit) {
   }
   if (userInput.length > 0 && list.length < limit) {
     list.push(userInput);
-    //console.log(`List after add element: ${list}`);
     let newElement = document.createElement("li");
     newElement.innerHTML = userInput;
     listArea.appendChild(newElement);
     newElement.classList.add("plan-area__list__li");
     localStorage.setItem(listArea.id, JSON.stringify(list));
-    //console.log(`Storage after add element: ${storedListElement}`);
   }
   input.value = "";
 }
