@@ -10,8 +10,8 @@ function addListElement(input, list, listArea, limit) {
     list.push(userInput);
     let newElement = document.createElement("li");
     newElement.innerHTML = userInput;
-    listArea.appendChild(newElement);
     newElement.classList.add("plan-area__list__li");
+    listArea.appendChild(newElement);
     localStorage.setItem(listArea.id, JSON.stringify(list));
   }
   input.value = "";
