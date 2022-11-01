@@ -28,7 +28,7 @@ function addListElement(input, list, listArea, limit) {
   if (storedListElement) {
     list = storedListElement;
   }
-  if (userInput.length > 0 && list.length < limit) {
+  if (list.length < limit) {
     list.push(userInput);
     createListElement(listArea, userInput);
     localStorage.setItem(listArea.id, JSON.stringify(list));
