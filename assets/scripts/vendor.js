@@ -65,3 +65,8 @@ let myMealList = [];
 let myToDoList = [];
 let myAppointmentsList = [];
 
+const goalLimit = 5;
+const mealLimit = 5;
+const todoLimit = 10;
+const appointmentsLimit = 10;
+

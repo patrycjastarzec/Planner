@@ -38,15 +38,15 @@ function addListElement(input, list, listArea, limit) {
 
 addGoalButton.addEventListener(
   "click",
-  addListElement.bind(this, goalInput, myGoalList, goalListArea, 5)
+  addListElement.bind(this, goalInput, myGoalList, goalListArea, goalLimit)
 );
 addMealButton.addEventListener(
   "click",
-  addListElement.bind(this, mealInput, myMealList, mealListArea, 5)
+  addListElement.bind(this, mealInput, myMealList, mealListArea, mealLimit)
 );
 addToDoButton.addEventListener(
   "click",
-  addListElement.bind(this, toDoInput, myToDoList, tasksListArea, 10)
+  addListElement.bind(this, toDoInput, myToDoList, tasksListArea, todoLimit)
 );
 addAppointmentButton.addEventListener(
   "click",
@@ -55,7 +55,7 @@ addAppointmentButton.addEventListener(
     appointmentInput,
     myAppointmentsList,
     appointmentsListArea,
-    10
+    appointmentsLimit
   )
 );
 
