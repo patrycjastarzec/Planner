@@ -1,5 +1,15 @@
-//-----------------List input-----------------
+//-----------------Create list element-----------------
+function createListElement(listArea, input) {
+  let newElement = document.createElement("li");
+  newElement.classList.add("plan-area__list__li");
+  newElement.innerHTML = input;
+  listArea.appendChild(newElement);
+  newElement.addEventListener("click", function () {
+    newElement.classList.toggle("li-task__done");
+  });
+}
 
+//-----------------Add list input-----------------
 function addListElement(input, list, listArea, limit) {
   let userInput = input.value;
   let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
@@ -8,10 +18,7 @@ function addListElement(input, list, listArea, limit) {
   }
   if (userInput.length > 0 && list.length < limit) {
     list.push(userInput);
-    let newElement = document.createElement("li");
-    newElement.classList.add("plan-area__list__li");
-    newElement.innerHTML = userInput;
-    listArea.appendChild(newElement);
+    createListElement(listArea, userInput);
     localStorage.setItem(listArea.id, JSON.stringify(list));
   }
   input.value = "";
@@ -126,10 +133,7 @@ function checkListInStorage(listArea) {
   let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
   if (storedListElement) {
     storedListElement.forEach((listElement) => {
-      let newElement = document.createElement("li");
-      newElement.classList.add("plan-area__list__li");
-      newElement.innerHTML = listElement;
-      listArea.appendChild(newElement);
+      createListElement(listArea, listElement);
     });
   }
 }

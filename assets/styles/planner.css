@@ -332,6 +332,11 @@ body {
   background-color: rgba(199, 191, 216);
 }
 
+.li-task__done {
+  color: rgb(159, 159, 159);
+  text-decoration: line-through;
+}
+
 /*-------------MOBILE VIEW-----------------*/
 
 @media screen and (max-width: 768px) {
