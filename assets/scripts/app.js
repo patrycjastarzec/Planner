@@ -9,8 +9,8 @@ function addListElement(input, list, listArea, limit) {
   if (userInput.length > 0 && list.length < limit) {
     list.push(userInput);
     let newElement = document.createElement("li");
-    newElement.innerHTML = userInput;
     newElement.classList.add("plan-area__list__li");
+    newElement.innerHTML = userInput;
     listArea.appendChild(newElement);
     localStorage.setItem(listArea.id, JSON.stringify(list));
   }
@@ -92,7 +92,7 @@ removeNotesButton.addEventListener(
 
 //-----------------Remove list input------------
 
-function removeListElement(listArea, list) {
+function removeListElement(listArea) {
   let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
   if (storedListElement.length > 0) {
     list = storedListElement;
@@ -125,9 +125,10 @@ removeAppointmentButton.addEventListener(
 function checkListInStorage(listArea) {
   let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
   if (storedListElement) {
-    storedListElement.forEach((x) => {
+    storedListElement.forEach((listElement) => {
       let newElement = document.createElement("li");
-      newElement.innerHTML = x;
+      newElement.classList.add("plan-area__list__li");
+      newElement.innerHTML = listElement;
       listArea.appendChild(newElement);
     });
   }
