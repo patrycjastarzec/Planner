@@ -12,16 +12,17 @@ function createListElement(listArea, input) {
 //-----------------Create text element-----------------
 function createTextElement(listArea, input) {
   let newElement = document.createElement("p");
-  if (input) {
-    newElement.innerHTML = input;
-    if (listArea.children.length < 1) {
-      listArea.appendChild(newElement);
-    }
+  newElement.innerHTML = input;
+  if (listArea.children.length < 1) {
+    listArea.appendChild(newElement);
   }
 }
 
 //-----------------Add list input-----------------
 function addListElement(input, list, listArea, limit) {
+  if (!input.value) {
+    return;
+  }
   let userInput = input.value;
   let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
   if (storedListElement) {
@@ -61,6 +62,9 @@ addAppointmentButton.addEventListener(
 //-----------------Text input-----------------
 
 function addTextElement(myElement, input) {
+  if (!input.value) {
+    return;
+  }
   let storedTextElement = localStorage.getItem(`${myElement.id}`);
   if (storedTextElement) {
     localStorage.removeItem(`${myElement.id}`);
