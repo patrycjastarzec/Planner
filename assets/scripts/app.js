@@ -9,6 +9,15 @@ function createListElement(listArea, input) {
   });
 }
 
+//-----------------Create text element-----------------
+function createTextElement(listArea, input) {
+  let newElement = document.createElement("p");
+  newElement.innerHTML = input;
+  if (listArea.children.length < 1) {
+    listArea.appendChild(newElement);
+  }
+}
+
 //-----------------Add list input-----------------
 function addListElement(input, list, listArea, limit) {
   let userInput = input.value;
@@ -55,11 +64,7 @@ function addTextElement(input, myElement) {
     localStorage.removeItem(`${myElement.id}`);
   }
   let userInput = input.value;
-  let newElement = document.createElement("p");
-  newElement.innerHTML = userInput;
-  if (myElement.children.length < 1) {
-    myElement.appendChild(newElement);
-  }
+  createTextElement(myElement, userInput);
   input.value = "";
   localStorage.setItem(`${myElement.id}`, userInput);
 }
@@ -147,9 +152,7 @@ checkListInStorage(appointmentsListArea);
 function checkTextInStorage(myElement) {
   let storedTextElement = localStorage.getItem(myElement.id);
   if (storedTextElement) {
-    let newElement = document.createElement("p");
-    newElement.innerHTML = storedTextElement;
-    myElement.appendChild(newElement);
+    createTextElement(myElement, storedTextElement);
   }
 }
 checkTextInStorage(priorityElement);
