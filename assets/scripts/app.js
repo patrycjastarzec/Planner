@@ -12,9 +12,11 @@ function createListElement(listArea, input) {
 //-----------------Create text element-----------------
 function createTextElement(listArea, input) {
   let newElement = document.createElement("p");
-  newElement.innerHTML = input;
-  if (listArea.children.length < 1) {
-    listArea.appendChild(newElement);
+  if (input) {
+    newElement.innerHTML = input;
+    if (listArea.children.length < 1) {
+      listArea.appendChild(newElement);
+    }
   }
 }
 
@@ -58,7 +60,7 @@ addAppointmentButton.addEventListener(
 
 //-----------------Text input-----------------
 
-function addTextElement(input, myElement) {
+function addTextElement(myElement, input) {
   let storedTextElement = localStorage.getItem(`${myElement.id}`);
   if (storedTextElement) {
     localStorage.removeItem(`${myElement.id}`);
@@ -71,15 +73,15 @@ function addTextElement(input, myElement) {
 
 addPriorButton.addEventListener(
   "click",
-  addTextElement.bind(this, priorityInput, priorityElement)
+  addTextElement.bind(this, priorityElement, priorityInput)
 );
 addGratefulButton.addEventListener(
   "click",
-  addTextElement.bind(this, gratefulInput, gratefulElement)
+  addTextElement.bind(this, gratefulElement, gratefulInput)
 );
 addNotesButton.addEventListener(
   "click",
-  addTextElement.bind(this, notesInput, notesElement)
+  addTextElement.bind(this, notesElement, notesInput)
 );
 
 //-----------------Remove text input------------
@@ -104,10 +106,12 @@ removeNotesButton.addEventListener(
 
 //-----------------Remove list input------------
 
-function removeListElement(listArea) {
+function removeListElement(listArea, list) {
   let storedListElement = JSON.parse(localStorage.getItem(listArea.id));
-  if (storedListElement.length > 0) {
+  if (storedListElement) {
     list = storedListElement;
+  }
+  if (list.length > 0) {
     localStorage.removeItem(listArea.id);
     listArea.removeChild(listArea.lastElementChild);
     storedListElement.pop();
